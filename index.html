@@ -1,310 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HeisenDrop - Movies & Series</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
         .movie-card {
             transition: all 0.3s ease;
-            transform: scale(1);
         }
+
         .movie-card:hover {
-            transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-8px) scale(1.03);
         }
+
+        /* Add this CSS for the clear (cancel) button inside input */
+        .input-clear-btn {
+            position: absolute;
+            right: 0.75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: transparent;
+            border: none;
+            color: #a0aec0;
+            cursor: pointer;
+            font-size: 1.1rem;
+            display: none;
+        }
+
+        .input-clear-btn.visible {
+            display: block;
+        }
+
         .gradient-bg {
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
         }
-        .blur-bg {
-            backdrop-filter: blur(10px);
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-            display: none;
-        }
-        .scrollbar-hide {
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .fade-in {
-            animation: fadeIn 0.5s ease-in-out;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
     </style>
 </head>
-<body class="gradient-bg min-h-screen text-white">
-    <!-- Navigation -->
-    <nav class="blur-bg sticky top-0 z-50">
+
+<body class="gradient-bg text-white min-h-screen">
+
+    
+
+
+
+    <p id="no-results" class="text-center text-white text-xl mt-6 hidden">
+        No results found.<br />
+        <span class="text-sm text-gray-300">Contact us if you’re looking for a specific movie or series.</span>
+    </p>
+
+    <!-- Navbar -->
+    <nav class="blur-bg sticky top-0 z-50 bg-gray-900">
         <div class="container mx-auto px-4 py-3 flex justify-between items-center">
             <div class="flex items-center space-x-2">
                 <i class="fas fa-film text-2xl text-blue-400"></i>
-                <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">HeisenDrop</h1>
-            </div>
-            <div class="hidden md:flex space-x-6">
-                <a href="#" class="hover:text-blue-400 transition">Home</a>
-                <a href="#" class="hover:text-blue-400 transition">Movies</a>
-                <a href="#" class="hover:text-blue-400 transition">TV Series</a>
-                <a href="#" class="hover:text-blue-400 transition">Trending</a>
+
+                <h1
+                    class="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
+                    HeisenDrop
+                </h1>
             </div>
             <div class="flex items-center space-x-4">
-                <button class="p-2 rounded-full hover:bg-gray-700 transition">
-                    <i class="fas fa-search"></i>
-                </button>
-                <button class="md:hidden p-2 rounded-full hover:bg-gray-700 transition" id="mobile-menu-button">
-                    <i class="fas fa-bars"></i>
-                </button>
-            </div>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="md:hidden hidden blur-bg absolute w-full left-0 px-4 py-2" id="mobile-menu">
-            <a href="#" class="block py-2 hover:text-blue-400 transition">Home</a>
-            <a href="#" class="block py-2 hover:text-blue-400 transition">Movies</a>
-            <a href="#" class="block py-2 hover:text-blue-400 transition">TV Series</a>
-            <a href="#" class="block py-2 hover:text-blue-400 transition">Trending</a>
-        </div>
-    </nav>
-
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-8">
-        <!-- Hero Section -->
-        <section class="mb-12 relative rounded-xl overflow-hidden">
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <img src="https://image.tmdb.org/t/p/w500/iRDNn9EHKuBhGa77UBteazvsZa1.jpg"
-  width="300"
-  height="450"
-  alt="Breaking Bad Poster" class="w-full h-96 object-cover">
-            <div class="absolute bottom-0 left-0 p-8 w-full">
-                <h2 class="text-4xl font-bold mb-2">Breaking Bad</h2>
-                <div class="flex items-center space-x-4 mb-4">
-                    <span class="bg-blue-500 px-2 py-1 rounded text-sm">9.5/10</span>
-                    <span>2013</span>
-                    <span>5 Seasons</span>
-                </div>
-                <p class="max-w-2xl mb-4">A high school chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine in order to secure his family's future.</p>
-                <div class="flex space-x-4">
-                    <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium transition flex items-center">
-                        <i class="fas fa-play mr-2"></i> Watch Now
-                    </button>
-                    <button class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-lg font-medium transition flex items-center">
-                        <i class="fas fa-plus mr-2"></i> Add to List
+                <!-- Desktop Search -->
+                <div class="relative hidden md:block w-64">
+                    <input type="text" id="search-input-desktop" placeholder="Search movies or series..."
+                        class="bg-gray-800 text-white placeholder-gray-400 px-4 py-2 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-blue-500 transition pr-10" />
+                    <button type="button" id="clear-desktop-search"
+                        class="input-clear-btn absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white focus:outline-none hidden"
+                        aria-label="Clear search">
+                        <i class="fas fa-times"></i>
                     </button>
                 </div>
-            </div>
-        </section>
+                <script>
+                    // Cancel button logic for desktop search
+                    document.addEventListener("DOMContentLoaded", function () {
+                        const input = document.getElementById("search-input-desktop");
+                        const clearBtn = document.getElementById("clear-desktop-search");
+                        input.addEventListener("input", function () {
+                            if (input.value.length > 0) {
+                                clearBtn.classList.remove("hidden");
+                            } else {
+                                clearBtn.classList.add("hidden");
+                            }
+                        });
+                        clearBtn.addEventListener("click", function () {
+                            input.value = "";
+                            clearBtn.classList.add("hidden");
+                            input.dispatchEvent(new Event("input"));
+                            input.focus();
+                        });
+                    });
+                    
+                </script>
+                <!-- Mobile Search Icon -->
+                <!-- Mobile Search Icon (only visible on small screens) -->
+                <button class="block md:hidden p-2 rounded-full hover:bg-gray-700 transition" id="mobile-search-toggle">
+                    <i class="fas fa-search text-white"></i>
+                </button>
 
-        <!-- Categories -->
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">New Movies & Series</h2>
-                <a href="#" class="text-blue-400 hover:underline">View All</a>
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="movies-container">
-                <!-- Movie cards will be inserted here by JavaScript -->
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">Historical Movies</h2>
-                <a href="#" class="text-blue-400 hover:underline">View All</a>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="historical-container">
-                <!-- Historical movie cards will be inserted here by JavaScript -->
-            </div>
-        </section>
-
-        <section class="mb-12">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold">Popular TV Series</h2>
-                <a href="#" class="text-blue-400 hover:underline">View All</a>
-            </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="series-container">
-                <!-- Series cards will be inserted here by JavaScript -->
-            </div>
-        </section>
-    </main>
-
-    <!-- Movie Details Modal -->
-    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4" id="movie-modal">
-        <div class="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide fade-in">
+        </div>
+        <!-- Mobile Search Bar (with clear button) -->
+        <div id="mobile-search-bar" class="md:hidden hidden px-4 py-2 bg-gray-900">
             <div class="relative">
-                <button class="absolute top-4 right-4 bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition" id="close-modal">
-                    <i class="fas fa-times"></i>
-                </button>
-                <div class="flex flex-col md:flex-row">
-                    <div class="md:w-1/3">
-                        <img src="" alt="Movie Poster" class="w-full h-auto rounded-t-xl md:rounded-l-xl md:rounded-tr-none" id="modal-poster">
-                    </div>
-                    <div class="p-6 md:w-2/3">
-                        <h2 class="text-3xl font-bold mb-2" id="modal-title"></h2>
-                        <div class="flex flex-wrap items-center gap-2 mb-4">
-                            <span class="bg-blue-500 px-2 py-1 rounded text-sm" id="modal-rating"></span>
-                            <span id="modal-year"></span>
-                            <span id="modal-runtime"></span>
-                            <span id="modal-type"></span>
-                        </div>
-                        <p class="text-gray-300 mb-4" id="modal-plot"></p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
-                            <div>
-                                <h4 class="text-gray-400">Genre</h4>
-                                <p id="modal-genre"></p>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400">Director</h4>
-                                <p id="modal-director"></p>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400">Cast</h4>
-                                <p id="modal-cast"></p>
-                            </div>
-                            <div>
-                                <h4 class="text-gray-400">Language</h4>
-                                <p id="modal-language"></p>
-                            </div>
-                        </div>
-                        <div class="flex flex-wrap gap-4">
-                            <button class="bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium transition flex items-center">
-                                <i class="fas fa-play mr-2"></i> Watch Now
-                            </button>
-                            <button class="bg-green-600 hover:bg-green-700 px-6 py-2 rounded-lg font-medium transition flex items-center" id="download-btn">
-                                <i class="fas fa-download mr-2"></i> Download
-                            </button>
-                            <button class="bg-gray-700 hover:bg-gray-600 px-6 py-2 rounded-lg font-medium transition flex items-center">
-                                <i class="fas fa-plus mr-2"></i> Add to List
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Download Options Modal -->
-    <div class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4" id="download-modal">
-        <div class="bg-gray-900 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide fade-in p-6">
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-2xl font-bold" id="download-title">Download Options</h2>
-                <button class="bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition" id="close-download-modal">
+                <input type="text" id="search-input-mobile" placeholder="Search..."
+                    class="w-full bg-gray-800 text-white placeholder-gray-400 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition pr-10" />
+                <button type="button" id="clear-mobile-search"
+                    class="input-clear-btn absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white focus:outline-none hidden"
+                    aria-label="Clear search">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
-            <div class="space-y-4">
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="font-medium mb-2">720p HD</h3>
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm text-gray-400">
-                            <span>1.2GB</span>
-                            <span class="mx-2">•</span>
-                            <span>MP4</span>
-                        </div>
-                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg text-sm transition">
-                            Download
-                        </button>
-                    </div>
-                </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="font-medium mb-2">1080p Full HD</h3>
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm text-gray-400">
-                            <span>2.5GB</span>
-                            <span class="mx-2">•</span>
-                            <span>MP4</span>
-                        </div>
-                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg text-sm transition">
-                            Download
-                        </button>
-                    </div>
-                </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="font-medium mb-2">4K Ultra HD</h3>
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm text-gray-400">
-                            <span>5.8GB</span>
-                            <span class="mx-2">•</span>
-                            <span>MKV</span>
-                        </div>
-                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg text-sm transition">
-                            Download
-                        </button>
-                    </div>
-                </div>
-                <div class="bg-gray-800 p-4 rounded-lg">
-                    <h3 class="font-medium mb-2">Subtitles</h3>
-                    <div class="flex justify-between items-center">
-                        <div class="text-sm text-gray-400">
-                            <span>Multiple Languages</span>
-                        </div>
-                        <button class="bg-blue-600 hover:bg-blue-700 px-4 py-1 rounded-lg text-sm transition">
-                            Download
-                        </button>
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+        <script>
+            // Cancel button logic for mobile search
+            document.addEventListener("DOMContentLoaded", function () {
+                const input = document.getElementById("search-input-mobile");
+                const clearBtn = document.getElementById("clear-mobile-search");
+                input.addEventListener("input", function () {
+                    if (input.value.length > 0) {
+                        clearBtn.classList.remove("hidden");
+                    } else {
+                        clearBtn.classList.add("hidden");
+                    }
+                });
+                clearBtn.addEventListener("click", function () {
+                    input.value = "";
+                    clearBtn.classList.add("hidden");
+                    input.dispatchEvent(new Event("input"));
+                    input.focus();
+                });
+            });
+        </script>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 py-8">
-        <div class="container mx-auto px-4">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4 flex items-center">
-                        <i class="fas fa-film text-blue-400 mr-2"></i> HeisenDrop
-                    </h3>
-                    <p class="text-gray-400">The best place to discover and download your favorite movies and TV series.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Navigation</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Movies</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">TV Series</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Trending</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="text-gray-400 hover:text-white transition">DMCA</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Connect With Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="tel:+919175028935" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fas fa-phone"></i>
-                        </a>
-                        <a href="https://www.linkedin.com/in/gaurav-chaudhary-163bb2361" target="_blank" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://www.instagram.com/heisenberg1335/" target="_blank" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                        <a href="#" class="text-gray-400 hover:text-white transition text-xl">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
-                <p>&copy; 2025 HeisenDrop. All rights reserved.
-                <br><b>Made By Gaurav Chaudhary</b>
-                </p>
-            </div>
+        <!-- Mobile Search Bar -->
+        <div id="mobile-search-bar" class="md:hidden hidden px-4 py-2 bg-gray-900">
+            <input type="text" id="search-input-mobile" placeholder="Search..."
+                class="w-full bg-gray-800 text-white placeholder-gray-400 px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition" />
+
         </div>
-    </footer>
 
-    <script>
-        // Sample data for movies and series
-        const historical = [
+        <!-- Main Content -->
+        <main class="container mx-auto px-4 py-8">
+            <section class="mb-12">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold">New Movies & Series</h2>
+                    <a href="movies.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="movies-container">
+                </div>
+            </section>
+
+
+            
+
+
+            <section class="mb-12">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold">Series</h2>
+                    <a href="series.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="series-container">
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <div class="flex justify-between items-center mb-4">
+                    <h2 class="text-2xl font-bold">Must Watch</h2>
+                    <a href="mustWatch.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
+                    id="mustwatch-container"></div>
+            </section>
+
+        </main>
+
+
+        <script>
+            const movies = [
+
+                {
+                    title: "Raid 2",
+                    year: "2025",
+                    rating: "7.5",
+                    type: "Movie",
+                    genre: "Action, Crime, Drama",
+                    cast: "Ajay Devgn, Ritesh Deshmukh, Vaani Kapoor",
+                    plot: "After exposing corruption, the protagonist must go deeper into the underworld.",
+                    poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
+                    download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
+                }
+            ];
+
+            const series = [
+
+                {
+                    id: 2,
+                    title: "Alice in Borderland S01",
+                    year: "2020",
+                    rating: "8.7",
+                    type: "TV Series",
+                    genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
+                    cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
+                    plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
+                    poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
+                    download_url: "https://drive.usercontent.google.com/download?id=1k-l5v34Bhnyy3FD4XBXTmW-N5R-cVSeG&export=download&authuser=0"
+                },
+                {
+                    id: 3,
+                    title: "Alice in Borderland S02",
+                    year: "2022",
+                    rating: "8.7",
+                    type: "TV Series",
+                    genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
+                    cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
+                    plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
+                    poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
+                    download_url: "https://drive.usercontent.google.com/download?id=147QDGJv8BnqJT6ReesVjtIh1BGM_WOZX&export=download&authuser=0"
+                },
+            ];
+
+            const mustwatch = [
+                {
+                    title: "Inception",
+                    year: "2010",
+                    rating: "8.8",
+                    type: "Movie",
+                    genre: "Action, Sci-Fi",
+                    cast: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
+                    plot: "A thief who uses dream-sharing tech is given the inverse task of planting an idea.",
+                    poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
+                    download_url: "https://drive.usercontent.google.com/download?id=1yof0tCINz37iEmKb7EQak9p1FRaLJJjl&export=download&authuser=0"
+                },
+                {
+                    id: 3,
+                    title: "The Martian",
+                    year: 1994,
+                    rating: "8.9/10",
+                    genre: "sci-fi, Drama",
+                    poster: "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg",
+                    plot: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+                    director: "Quentin Tarantino",
+                    cast: "John Travolta, Uma Thurman, Samuel L. Jackson",
+                    runtime: "154 min",
+                    language: "English",
+                    type: "Movie",
+                    download_url: "https://drive.usercontent.google.com/download?id=1cU4gl6GvHJllEmPW7miyipe_8ULnOPjU&export=download&authuser=0"
+                },
+                {
+                    title: "Mukkabaaz",
+                    year: "2018",
+                    rating: "7.8",
+                    type: "Movie",
+                    genre: "Action, Drama, Sport",
+                    cast: "Vineet Kumar Singh, Zoya Hussain, Ravi Kishan",
+                    plot: "A low caste boxer trains at a gym controlled by a local Don. Shravan falls for Mishra’s niece. The Don does not approve of this match. Shravan strives to win Sunaina’s hand in marriage and become a successful boxer while trying to avoid retaliation from the Don.",
+                    poster: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mukkabaaz-et00059419-07-07-2017-05-57-42.jpg",
+                    download_url: "https://drive.usercontent.google.com/download?id=1W3fDQXUREvs6-zdywBzEwlrfdL9IOB-E&export=download&authuser=0"
+                },
                 {
                     id: 1,
                     title: "Padmaavat",
@@ -318,328 +274,258 @@
                     runtime: "164 min",
                     type: "Movie",
                     download_url: "https://drive.usercontent.google.com/download?id=1tFaFdCtY1K_JcvcGJwxesYyuTYfdGcl3&export=download&authuser=0"
-                }
+                },
             ];
 
-        const movies = [
-            {
-                id: 1,
-                title: "Inception",
-                year: 2010,
-                rating: "8.8/10",
-                genre: "Action, Sci-Fi",
-                poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
-                plot: "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
-                director: "Christopher Nolan",
-                cast: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
-                runtime: "148 min",
-                language: "Hindi",
-                type: "Movie",
-                download_url: "https://drive.usercontent.google.com/download?id=1yof0tCINz37iEmKb7EQak9p1FRaLJJjl&export=download&authuser=0"
-            },
-            {
-                id: 2,
-                title: "Raid 2",
-                year: 2025,
-                rating: "7.5/10",
-                genre: "Action, Crime, Drama",
-                poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
-                plot: "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
-                director: "Christopher Nolan",
-                cast: "Ajay Devgn, Ritesh Deshmukh, Vaani Kapoor",
-                runtime: "152 min",
-                language: "Hindi",
-                type: "Movie",
-                download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
-            },
-            {
-                id: 3,
-                title: "The Martian",
-                year: 1994,
-                rating: "8.9/10",
-                genre: "sci-fi, Drama",
-                poster: "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg",
-                plot: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
-                director: "Quentin Tarantino",
-                cast: "John Travolta, Uma Thurman, Samuel L. Jackson",
-                runtime: "154 min",
-                language: "English",
-                type: "Movie",
-                download_url: "https://drive.usercontent.google.com/download?id=1cU4gl6GvHJllEmPW7miyipe_8ULnOPjU&export=download&authuser=0"
-            },
-            {
-                id: 4,
-                title: "The Shawshank Redemption",
-                year: 1994,
-                rating: "9.3/10",
-                genre: "Drama",
-                poster: "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
-                plot: "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
-                director: "Frank Darabont",
-                cast: "Tim Robbins, Morgan Freeman, Bob Gunton",
-                runtime: "142 min",
-                language: "English",
-                type: "Movie"
-            },
-            {
-                id: 5,
-                title: "The Godfather",
-                year: 1972,
-                rating: "9.2/10",
-                genre: "Crime, Drama",
-                poster: "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
-                plot: "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son.",
-                director: "Francis Ford Coppola",
-                cast: "Marlon Brando, Al Pacino, James Caan",
-                runtime: "175 min",
-                language: "English",
-                type: "Movie"
+            function renderCard(item, container) {
+                const card = document.createElement("div");
+                card.className = "movie-card bg-gray-800 rounded-lg overflow-hidden shadow-md cursor-pointer";
+                card.innerHTML = `
+      <img src="${item.poster}" class="w-full h-64 object-cover" />
+      <div class="p-4">
+        <h3 class="font-bold text-white">${item.title}</h3>
+        <p class="text-sm text-gray-400">${item.year} • ${item.type}</p>
+      </div>
+    `;
+                card.addEventListener("click", () => window.openMovieModal(item));
+                container.appendChild(card);
             }
-        ];
 
-        const series = [
-            {
-                id: 101,
-                title: "Stranger Things",
-                year: 2016,
-                rating: "8.7/10",
-                genre: "Drama, Fantasy, Horror",
-                poster: "https://image.tmdb.org/t/p/w500/x2LSRK2Cm7MZhjluni1msVJ3wDF.jpg",
-                plot: "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.",
-                director: "The Duffer Brothers",
-                cast: "Millie Bobby Brown, Finn Wolfhard, Winona Ryder",
-                runtime: "4 Seasons",
-                language: "English",
-                type: "TV Series"
-            },
-            {
-                id: 102,
-                title: "Game of Thrones",
-                year: 2011,
-                rating: "9.2/10",
-                genre: "Action, Adventure, Drama",
-                poster: "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
-                plot: "Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.",
-                director: "David Benioff, D.B. Weiss",
-                cast: "Emilia Clarke, Peter Dinklage, Kit Harington",
-                runtime: "8 Seasons",
-                language: "English",
-                type: "TV Series"
-            },
-            {
-                id: 103,
-                title: "The Mandalorian",
-                year: 2019,
-                rating: "8.7/10",
-                genre: "Action, Adventure, Sci-Fi",
-                poster: "https://image.tmdb.org/t/p/w500/lFx2i2pg1BoaD7grcpGDyHM1eML.jpg",
-                plot: "The travels of a lone bounty hunter in the outer reaches of the galaxy, far from the authority of the New Republic.",
-                director: "Jon Favreau",
-                cast: "Pedro Pascal, Gina Carano, Carl Weathers",
-                runtime: "3 Seasons",
-                language: "English",
-                type: "TV Series"
-            },
-            {
-                id: 104,
-                title: "The Witcher",
-                year: 2019,
-                rating: "8.0/10",
-                genre: "Action, Adventure, Fantasy",
-                poster: "https://image.tmdb.org/t/p/w500/zrPpUlehQaBf8YX2NrVrKK8IEpf.jpg",
-                plot: "Geralt of Rivia, a mutated monster-hunter for hire, journeys toward his destiny in a turbulent world where people often prove more wicked than beasts.",
-                director: "Lauren Schmidt Hissrich",
-                cast: "Henry Cavill, Anya Chalotra, Freya Allan",
-                runtime: "3 Seasons",
-                language: "English",
-                type: "TV Series"
-            },
-            {
-                id: 105,
-                title: "Money Heist",
-                year: 2017,
-                rating: "8.2/10",
-                genre: "Action, Crime, Mystery",
-                poster: "https://image.tmdb.org/t/p/w500/reEMJA1uzscCbkpeRJeTT2bjqUp.jpg",
-                plot: "An unusual group of robbers attempt to carry out the most perfect robbery in Spanish history - stealing 2.4 billion euros from the Royal Mint of Spain.",
-                director: "Álex Pina",
-                cast: "Úrsula Corberó, Álvaro Morte, Itziar Ituño",
-                runtime: "5 Seasons",
-                language: "Spanish",
-                type: "TV Series"
+            function renderAll() {
+                const moviesContainer = document.getElementById("movies-container");
+                const seriesContainer = document.getElementById("series-container");
+
+                const mustwatchContainer = document.getElementById("mustwatch-container");
+
+                moviesContainer.innerHTML = "";
+                seriesContainer.innerHTML = "";
+
+                mustwatchContainer.innerHTML = "";
+
+                movies.forEach((m) => renderCard(m, moviesContainer));
+                series.forEach((s) => renderCard(s, seriesContainer));
+
+                mustwatch.forEach((m) => renderCard(m, mustwatchContainer));
             }
-        ];
 
-        // DOM elements
-        const moviesContainer = document.getElementById('movies-container');
-        const seriesContainer = document.getElementById('series-container');
-        const historicalContainer = document.getElementById('historical-container');
-        const movieModal = document.getElementById('movie-modal');
-        const downloadModal = document.getElementById('download-modal');
-        const closeModalBtn = document.getElementById('close-modal');
-        const closeDownloadModalBtn = document.getElementById('close-download-modal');
-        const downloadBtn = document.getElementById('download-btn');
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
+            function filterAndRender(query) {
+                const q = query.toLowerCase();
 
-        // Render movie cards
-        function renderMovies() {
-            movies.forEach(movie => {
-                const movieCard = document.createElement('div');
-                movieCard.className = 'movie-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition';
-                movieCard.innerHTML = `
-                    <div class="relative">
-                        <img src="${movie.poster}" alt="${movie.title}" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2 bg-blue-500 px-2 py-1 rounded text-xs font-bold">
-                            ${movie.rating}
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold truncate">${movie.title}</h3>
-                        <div class="flex justify-between items-center mt-2 text-sm text-gray-400">
-                            <span>${movie.year}</span>
-                            <span>${movie.type}</span>
-                        </div>
-                    </div>
-                `;
-                movieCard.addEventListener('click', () => openMovieModal(movie));
-                moviesContainer.appendChild(movieCard);
+                const moviesContainer = document.getElementById("movies-container");
+                const seriesContainer = document.getElementById("series-container");
+
+                const mustwatchContainer = document.getElementById("mustwatch-container");
+
+                const moviesSection = moviesContainer.closest("section");
+                const seriesSection = seriesContainer.closest("section");
+
+                const mustwatchSection = mustwatchContainer.closest("section");
+
+                // Always start by hiding all
+                moviesSection.style.display = "none";
+                seriesSection.style.display = "none";
+
+                mustwatchSection.style.display = "none";
+
+                moviesContainer.innerHTML = "";
+                seriesContainer.innerHTML = "";
+
+                mustwatchContainer.innerHTML = "";
+
+                const filteredMovies = movies.filter((m) => m.title.toLowerCase().includes(q));
+                const filteredSeries = series.filter((s) => s.title.toLowerCase().includes(q));
+
+                const filteredMustWatch = mustwatch.filter((mw) => mw.title.toLowerCase().includes(q));
+
+                if (filteredMovies.length) {
+                    moviesSection.style.display = "block";
+                    filteredMovies.forEach((m) => renderCard(m, moviesContainer));
+                }
+
+                if (filteredSeries.length) {
+                    seriesSection.style.display = "block";
+                    filteredSeries.forEach((s) => renderCard(s, seriesContainer));
+                }
+
+                
+
+                if (filteredMustWatch.length) {
+                    mustwatchSection.style.display = "block";
+                    filteredMustWatch.forEach((mw) => renderCard(mw, mustwatchContainer));
+                }
+
+
+                const noResults = document.getElementById("no-results");
+                if (
+                    !filteredMovies.length &&
+                    !filteredSeries.length &&
+                    !filteredMustWatch.length
+                ) {
+                    noResults.classList.remove("hidden");
+                } else {
+                    noResults.classList.add("hidden");
+                }
+
+            }
+
+
+
+            document.addEventListener("DOMContentLoaded", () => {
+                renderAll();
+
+                const mobileToggle = document.getElementById("mobile-search-toggle");
+                const mobileSearchBar = document.getElementById("mobile-search-bar");
+                const mobileInput = document.getElementById("search-input-mobile");
+                const desktopInput = document.getElementById("search-input-desktop");
+
+                mobileToggle.addEventListener("click", () => {
+                    mobileSearchBar.classList.toggle("hidden");
+                });
+
+                mobileInput.addEventListener("input", (e) => {
+                    filterAndRender(e.target.value);
+                });
+
+                desktopInput.addEventListener("input", (e) => {
+                    filterAndRender(e.target.value);
+                });
+
+                const modal = document.getElementById("movie-modal");
+                const closeModal = document.getElementById("close-modal");
+
+                window.openMovieModal = function (item) {
+                    console.log("Opening modal for:", item);
+                    document.getElementById("modal-poster").src = item.poster;
+                    document.getElementById("modal-title").textContent = item.title;
+                    document.getElementById("modal-year").textContent = item.year;
+                    document.getElementById("modal-rating").textContent = `Rating: ${item.rating}`;
+                    document.getElementById("modal-type").textContent = item.type;
+                    document.getElementById("modal-plot").textContent = item.plot || "No plot available.";
+                    document.getElementById("modal-genre").textContent = item.genre || "Unknown";
+                    document.getElementById("modal-cast").textContent = item.cast || "Unknown";
+                    document.getElementById("download-link").href = item.download_url || "#";
+                    modal.classList.remove("hidden");
+                    modal.classList.add("flex");
+                    document.body.style.overflow = "hidden";
+                };
+
+                closeModal.addEventListener("click", () => {
+                    modal.classList.add("hidden");
+                    modal.classList.remove("flex");
+                    document.body.style.overflow = "auto";
+                });
             });
-        }
+        </script>
 
-        // Render historical movie cards
-        function renderHistorical() {
-            historical.forEach(movie => {
-                const historicalCard = document.createElement('div');
-                historicalCard.className = 'movie-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition';
-                historicalCard.innerHTML = `
-                    <div class="relative">
-                        <img src="${movie.poster}" alt="${movie.title}" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2 bg-blue-500 px-2 py-1 rounded text-xs font-bold">
-                            ${movie.rating}
+
+
+
+
+        <!-- Modal -->
+        <div id="movie-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black bg-opacity-90 p-4">
+            <div class="bg-gray-900 rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto scrollbar-hide fade-in">
+                <div class="relative">
+                    <button class="absolute top-4 right-4 bg-gray-800 hover:bg-gray-700 p-2 rounded-full transition"
+                        id="close-modal">
+                        <i class="fas fa-times text-white"></i>
+                    </button>
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3">
+                            <img id="modal-poster" src="" alt="Movie Poster"
+                                class="w-full h-auto rounded-t-xl md:rounded-l-xl md:rounded-tr-none" />
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <h2 class="text-3xl font-bold mb-2" id="modal-title"></h2>
+                            <div class="flex flex-wrap gap-2 mb-4 text-sm text-gray-400">
+                                <span id="modal-year"></span>
+                                <span id="modal-type"></span>
+                                <span id="modal-rating"></span>
+                            </div>
+                            <p class="text-gray-300 mb-4" id="modal-plot"></p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-400 mb-4">
+                                <div>
+                                    <h4 class="text-white font-semibold">Genre</h4>
+                                    <p id="modal-genre"></p>
+                                </div>
+                                <div>
+                                    <h4 class="text-white font-semibold">Cast</h4>
+                                    <p id="modal-cast"></p>
+                                </div>
+                            </div>
+                            <a id="download-link" href="#" target="_blank"
+                                class="inline-block bg-blue-600 hover:bg-blue-700 px-6 py-2 rounded-lg font-medium text-white transition mt-4">
+                                <i class="fas fa-download mr-2"></i> Download
+                            </a>
                         </div>
                     </div>
-                    <div class="p-4">
-                        <h3 class="font-bold truncate">${movie.title}</h3>
-                        <div class="flex justify-between items-center mt-2 text-sm text-gray-400">
-                            <span>${movie.year}</span>
-                            <span>${movie.type}</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer class="bg-gray-900 py-8 mt-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div>
+                        <h3 class="text-xl font-bold mb-4 flex items-center">
+                            <i class="fas fa-film text-blue-400 mr-2"></i> HeisenDrop
+                        </h3>
+                        <p class="text-gray-400">
+                            The best place to discover and download your favorite movies and TV
+                            series.
+                        </p>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-4">Navigation</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Movies</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">TV Series</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Trending</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-4">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Terms of Service</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">DMCA</a></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold mb-4">Connect With Us</h4>
+                        <div class="flex space-x-4 text-xl">
+                            <a href="tel:+919175028935" class="text-gray-400 hover:text-white transition">
+                                <i class="fas fa-phone"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/gaurav-chaudhary-163bb2361" target="_blank"
+                                class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="https://www.instagram.com/heisenberg1335/" target="_blank"
+                                class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://t.me/HEISENBERG4343" target="_blank"
+                                class="text-gray-400 hover:text-white transition">
+                                <i class="fab fa-telegram"></i>
+                            </a>
                         </div>
                     </div>
-                `;
-                historicalCard.addEventListener('click', () => openMovieModal(movie));
-                historicalContainer.appendChild(historicalCard);
-            });
-        }
+                </div>
 
-        // Render series cards
-        function renderSeries() {
-            series.forEach(show => {
-                const seriesCard = document.createElement('div');
-                seriesCard.className = 'movie-card bg-gray-800 rounded-lg overflow-hidden cursor-pointer transition';
-                seriesCard.innerHTML = `
-                    <div class="relative">
-                        <img src="${show.poster}" alt="${show.title}" class="w-full h-64 object-cover">
-                        <div class="absolute top-2 right-2 bg-blue-500 px-2 py-1 rounded text-xs font-bold">
-                            ${show.rating}
-                        </div>
-                    </div>
-                    <div class="p-4">
-                        <h3 class="font-bold truncate">${show.title}</h3>
-                        <div class="flex justify-between items-center mt-2 text-sm text-gray-400">
-                            <span>${show.year}</span>
-                            <span>${show.type}</span>
-                        </div>
-                    </div>
-                `;
-                seriesCard.addEventListener('click', () => openMovieModal(show));
-                seriesContainer.appendChild(seriesCard);
-            });
-        }
+                <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-500 text-sm">
+                    <p>&copy; 2025 HeisenDrop. All rights reserved.<br /><b>Made By Gaurav Chaudhary</b></p>
+                </div>
+            </div>
+        </footer>
 
-        // Open movie modal with details
-        function openMovieModal(item) {
-            document.getElementById('modal-poster').src = item.poster;
-            document.getElementById('modal-title').textContent = item.title;
-            document.getElementById('modal-rating').textContent = item.rating;
-            document.getElementById('modal-year').textContent = item.year;
-            document.getElementById('modal-runtime').textContent = item.runtime;
-            document.getElementById('modal-type').textContent = item.type;
-            document.getElementById('modal-plot').textContent = item.plot;
-            document.getElementById('modal-genre').textContent = item.genre;
-            document.getElementById('modal-director').textContent = item.director;
-            document.getElementById('modal-cast').textContent = item.cast;
-            document.getElementById('modal-language').textContent = item.language;
-            
-            // Set download title
-            downloadBtn.dataset.url = item.download_url || '';
-            document.getElementById('download-title').textContent = `Download ${item.title}`;
-            
-            movieModal.classList.remove('hidden');
-            movieModal.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        }
+        <script src="data.js"></script>
 
-        // Close modal
-        function closeModal() {
-            movieModal.classList.add('hidden');
-            movieModal.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        }
-
-        // Close download modal
-        function closeDownloadModal() {
-            downloadModal.classList.add('hidden');
-            downloadModal.classList.remove('flex');
-        }
-
-        // Open download modal
-        // function openDownloadModal() {
-        //     downloadModal.classList.remove('hidden');
-        //     downloadModal.classList.add('flex');
-        // }
-
-
-        function openDownloadModal() {
-    const url = downloadBtn.dataset.url;
-
-    if (!url) {
-        alert("Download link not available.");
-        return;
-    }
-
-    // Open download in new tab
-    window.open(url, '_blank');
-}
-
-
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            mobileMenu.classList.toggle('hidden');
-        }
-
-        // Event listeners
-        closeModalBtn.addEventListener('click', closeModal);
-        closeDownloadModalBtn.addEventListener('click', closeDownloadModal);
-        downloadBtn.addEventListener('click', openDownloadModal);
-        mobileMenuButton.addEventListener('click', toggleMobileMenu);
-
-        // Close modals when clicking outside
-        window.addEventListener('click', (e) => {
-            if (e.target === movieModal) {
-                closeModal();
-            }
-            if (e.target === downloadModal) {
-                closeDownloadModal();
-            }
-        });
-
-        // Initialize the page
-        document.addEventListener('DOMContentLoaded', () => {
-            renderMovies();
-            renderSeries();
-            renderHistorical()
-        });
-    </script>
 </body>
+
 </html>

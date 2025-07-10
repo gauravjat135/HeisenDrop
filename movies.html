@@ -1,0 +1,109 @@
+<!-- movies.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HeisenDrop - Movies</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body class="bg-gray-900 text-white">
+  <div class="container mx-auto px-4 py-8">
+    <input id="search" placeholder="Search movies or series..." class="w-full mb-6 px-4 py-2 rounded bg-gray-800 text-white placeholder-gray-400" />
+    <div id="results" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+    <div id="no-results" class="hidden flex flex-col items-center justify-center mt-10">
+      <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent" speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+      <p class="text-white text-lg mt-4">😢 No matches found</p>
+      <p class="text-sm text-gray-300 text-center">Suggest a title and we’ll try to upload it!</p>
+      <a href="mailto:heisendrop@example.com" class="mt-3 px-3 py-1.5 text-sm bg-purple-600 hover:bg-purple-700 rounded">✉️ Request a Movie</a>
+    </div>
+  </div>
+
+  <!-- Movie Modal -->
+  <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
+    <div class="bg-gray-800 rounded-lg shadow-lg max-w-3xl w-full mx-4 md:mx-0 relative">
+      <button onclick="closeModal()" class="absolute top-3 right-4 text-white text-2xl">&times;</button>
+      <div class="md:flex">
+        <img id="modal-poster" class="w-full md:w-1/2 h-80 object-cover rounded-l-lg" />
+        <div class="p-6 space-y-2">
+          <h2 id="modal-title" class="text-2xl font-bold"></h2>
+          <p id="modal-meta" class="text-gray-400 text-sm"></p>
+          <p id="modal-description" class="mt-2 text-gray-300"></p>
+          <div class="grid grid-cols-2 gap-4 text-sm text-gray-300 mt-4">
+            <div><span class="font-semibold text-white">Genre:</span> <span id="modal-genre"></span></div>
+            <div><span class="font-semibold text-white">Cast:</span> <span id="modal-cast"></span></div>
+          </div>
+          <a id="modal-download" href="#" target="_blank" class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i class="fas fa-download mr-2"></i> Download</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script>
+    const container = document.getElementById("results");
+    const input = document.getElementById("search");
+    const noResults = document.getElementById("no-results");
+
+    const modal = document.getElementById("modal");
+    const modalPoster = document.getElementById("modal-poster");
+    const modalTitle = document.getElementById("modal-title");
+    const modalMeta = document.getElementById("modal-meta");
+    const modalDescription = document.getElementById("modal-description");
+    const modalGenre = document.getElementById("modal-genre");
+    const modalCast = document.getElementById("modal-cast");
+    const modalDownload = document.getElementById("modal-download");
+
+    const openModal = (item) => {
+      modalPoster.src = item.poster;
+      modalTitle.textContent = item.title;
+      modalMeta.textContent = `${item.year} • ${item.type} • Rating: ${item.rating || "N/A"}`;
+      modalDescription.textContent = item.plot || "No description available.";
+      modalGenre.textContent = item.genre || "Unknown";
+      modalCast.textContent = item.cast || "Unknown";
+      modalDownload.href = item.download || "#";
+      modal.classList.remove("hidden");
+    };
+
+    const closeModal = () => modal.classList.add("hidden");
+
+    const pageType = "movie";
+
+    function render(items) {
+      container.innerHTML = "";
+      if (items.length === 0) {
+        noResults.classList.remove("hidden");
+        return;
+      }
+      noResults.classList.add("hidden");
+      items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "bg-gray-800 rounded overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:z-10 cursor-pointer";
+        card.innerHTML = `
+          <img src="${item.poster}" alt="${item.title}" class="w-full h-64 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold">${item.title}</h3>
+            <p class="text-sm text-gray-400">${item.year} • ${item.type}</p>
+          </div>
+        `;
+        card.addEventListener("click", () => openModal(item));
+        container.appendChild(card);
+      });
+    }
+
+    input.addEventListener("input", e => {
+  const query = e.target.value.toLowerCase();
+  const filtered = allData.filter(item =>
+    item.title.toLowerCase().includes(query)
+  );
+  render(filtered);
+});
+
+
+    render(allData.filter(i => i.type.toLowerCase().includes(pageType)));
+  </script>
+</body>
+</html>

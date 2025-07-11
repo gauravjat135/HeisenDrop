@@ -1,4 +1,105 @@
 const allData = [
+    
+    {
+        title: "Housefull 5A",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Comedy, Family, Romance, Drama",
+        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
+        plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
+        poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
+        download_url: "https://drive.usercontent.google.com/download?id=1u6o80f-32XrmTxvbePkwYlRrI468dF01&export=download&authuser=0"
+    },
+    {
+        title: "Housefull 5B",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Comedy, Family, Romance, Drama",
+        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
+        plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
+        poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
+        download_url: "https://drive.usercontent.google.com/download?id=1zyvp66M0TrT5x_eiHmvXpgqythGshRTF&export=download&authuser=0"
+    },
+    {
+        title: "Maalik",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Action, Drama, Thriller",
+        cast: " Rajkummar Rao, Saurabh Shukla, Swanand Kirkire",
+        plot: "Set in the rural, rusty and politically charged Allahabad of the 1980s, Maalik is a peek into the making of a dreaded gangster from a humble background with intoxication of power to rule the world.",
+        poster: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/rajkummar-rao-in-maalik-315843439-3x4.jpg?VersionId=vbGtcSEdPCIggRMEMZ3kPKRzN17l8a6m",
+        download_url: "https://drive.usercontent.google.com/download?id=1JfxjpT2X0TiBGUtgsagVdtNzSHZd5wam&export=download&authuser=0"
+    },
+    {
+        title: "Metro In Dino",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Comedy, Family, Romance, Drama",
+        cast: "Aditya Roy Kapur, Sara Ali Khan, Anupam Kher, Neena Gupta",
+        plot: "A modern take on love and relationships, exploring the lives of various characters in a bustling city.",
+        poster: "https://static.toiimg.com/photo/122200827.cms?imgsize=139294",
+        download_url: "https://drive.usercontent.google.com/download?id=1LL3mHomaOh4NL4JTOIcmKYQMjaWZTEUs&export=download&authuser=5"
+    },
+    {
+        title: "Jurassic World Rebirth",
+        year: "2025",
+        rating: "8.5",
+        type: "Movie",
+        genre: "Action, Adventure, Sci-Fi",
+        cast: "Chris Pratt, Bryce Dallas Howard, Sam Neill",
+        plot: "In a world where dinosaurs roam freely, humanity must find a way to coexist with these ancient creatures while facing new threats.",
+        poster: "https://image.tmdb.org/t/p/original/qwOwDHUPCcDRmdQu8dWCzIVMEgu.jpg",
+        download_url: "https://new20.gdtot.dad/file/1265148599"
+    },
+    {
+        title: "Sitaare Zameen Par",
+        year: "2025",
+        rating: "7.9",
+        type: "Movie",
+        genre: "Drama, Family, comedy",
+        cast: "Aamir Khan, Darsheel Safary, Tanay Chheda",
+        plot: "A disgraced basketball coach is given the chance to coach a team of players who are intellectually disabled, and soon realizes they just might have what it takes to make it to the national championships.",
+        poster: "https://images.filmibeat.com/ph-big/2025/05/sitaare-zameen-par1747294849_1.jpg",
+        download_url: "https://new20.gdtot.dad/file/1277221024"
+    },
+    {
+        title: "Thug Life",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Drama, Crime, Thriller",
+        cast: "Kamal Haasan, Nassar, Silambarasan, Trisha Krishnan",
+        plot: "In a world ruled by crime and betrayal, mafia kingpin Sakthivel and his brother Manickam rescue a young boy, Amaran, during a violent police shootout and raise him as their own. Years later, when an assassination attempt shakes Sakthivel’s empire, suspicion turns inward. Consumed by vengeance, Sakthivel sets out to destroy the very family he once built.",
+        poster: "https://media.senscritique.com/media/000022852235/300/thug_life.jpg",
+        download_url: "https://new20.gdtot.dad/file/1827055186"
+    },
+    {
+        title: "Kannappa",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Drama, Action, Mythology",
+        cast: "Prabhas, Preity Mukhundhan, Vishnu Manchu",
+        plot: "After witnessing the cruel sacrifice of his childhood friend, an atheist warrior rejects religion until love forces him to find his own faith.",
+        poster: "https://akm-img-a-in.tosshub.com/indiatoday/styles/medium_crop_simple/public/2023-11/f_kn7jpaoaa9lgw.jpg?VersionId=DtWS9SGrkn402eMgVUtYg9DzrGaN4E9f&size=750:*",
+        download_url: "https://new20.gdtot.dad/file/1481040319"
+    },
+    {
+        title: "Maa",
+        year: "2025",
+        rating: "7.1",
+        type: "Movie",
+        genre: "Horror, Thriller",
+        cast: "Kajol, Kherin Sharma, Ronit Roy",
+        plot: "A mother and daughter encounter a demon in a village where girls have been disappearing.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZjI1ZTUyYzItZDEyMy00MTE1LWFhZmMtZWUxOThjMjU5Njk1XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/2242209494"
+    },
+    
     {
         title: "Raid 2",
         year: "2025",
@@ -89,4 +190,16 @@ const allData = [
         poster: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mukkabaaz-et00059419-07-07-2017-05-57-42.jpg",
         download_url: "https://drive.usercontent.google.com/download?id=1W3fDQXUREvs6-zdywBzEwlrfdL9IOB-E&export=download&authuser=0"
     },
+    {
+        title: "Adipurush",
+        year: "2023",
+        rating: "7.8",
+        type: "Movie",
+        genre: "Action, Adventure, Drama",
+        cast: "Prabhas, Kriti Sanon, Saif Ali Khan",
+        plot: "A mythological epic based on the Ramayana, depicting the battle between Lord Rama and Ravana.",
+        poster: "https://filmfare.wwmindia.com/content/2022/sep/adipurush-poster-first-look.jpg",
+        download_url: "https://drive.usercontent.google.com/download?id=10LDY_CgQ59y4lbgT3-a_vzjTmRcMYYf5&export=download&authuser=0"
+    },
+
 ]

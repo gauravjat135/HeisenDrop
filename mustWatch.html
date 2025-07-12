@@ -108,20 +108,40 @@
       });
     }
 
-    input.addEventListener("input", (e) => {
-      const query = e.target.value.toLowerCase();
-      const filtered = allData.filter(item =>
-        item.title.toLowerCase().includes(query)
-      );
-      render(filtered);
-      clearBtn.classList.toggle("hidden", !e.target.value);
-    });
+    // input.addEventListener("input", (e) => {
+    //   const query = e.target.value.toLowerCase();
+    //   const filtered = allData.filter(item =>
+    //     item.title.toLowerCase().includes(query)
+    //   );
+    //   render(filtered);
+    //   clearBtn.classList.toggle("hidden", !e.target.value);
+    // });
 
-    clearBtn.addEventListener("click", () => {
-      input.value = "";
-      input.dispatchEvent(new Event("input"));
-      input.focus();
-    });
+    // clearBtn.addEventListener("click", () => {
+    //   input.value = "";
+    //   input.dispatchEvent(new Event("input"));
+    //   input.focus();
+    // });
+
+    input.addEventListener("input", (e) => {
+  const query = e.target.value.toLowerCase();
+  if (!query) {
+    render(allData.filter(i => i.detail?.toLowerCase().includes("must watch"))); // Reset to default
+  } else {
+    const filtered = allData.filter(item =>
+      item.title.toLowerCase().includes(query)
+    );
+    render(filtered);
+  }
+  clearBtn.classList.toggle("hidden", !e.target.value);
+});
+
+clearBtn.addEventListener("click", () => {
+  input.value = "";
+  input.dispatchEvent(new Event("input"));
+  input.focus();
+});
+
 
 
     render(allData.filter(i => i.detail?.toLowerCase().includes("must watch")));

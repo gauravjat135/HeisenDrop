@@ -130,13 +130,26 @@
       cancelBtn.style.display = input.value ? "block" : "none";
     }
 
-            input.addEventListener("input", e => {
-      const query = e.target.value.toLowerCase();
-      const filtered = allData.filter(item =>
-        item.title.toLowerCase().includes(query)
-      );
-      render(filtered);
-    });
+    //         input.addEventListener("input", e => {
+    //   const query = e.target.value.toLowerCase();
+    //   const filtered = allData.filter(item =>
+    //     item.title.toLowerCase().includes(query)
+    //   );
+    //   render(filtered);
+    // });
+
+    input.addEventListener("input", e => {
+  const query = e.target.value.toLowerCase();
+  if (!query) {
+    render(allData.filter(i => i.type.toLowerCase().includes("movie"))); // ← reset to default
+  } else {
+    const filtered = allData.filter(item =>
+      item.title.toLowerCase().includes(query)
+    );
+    render(filtered);
+  }
+});
+
 
 
     render(allData.filter(i => i.type.toLowerCase().includes(pageType)));

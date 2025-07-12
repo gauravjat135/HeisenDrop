@@ -1,5 +1,28 @@
 const allData = [
-    
+
+    {
+        title: "Aankhon ki Gustaakhiyan",
+        year: "2025",
+        rating: "6.5",
+        type: "Movie",
+        genre: "Romance, Drama",
+        cast: "Vikrant Massey, Shanaya kapoor",
+        plot: "Explores the romance between two visually impaired characters, navigating both the joys and complexities of modern love.",
+        poster: "https://i0.wp.com/urbanasian.com/wp-content/uploads/2025/06/5d07ce94-ef93-4854-979b-935aeec92a28.jpeg?resize=640%2C800&ssl=1",
+        download_url: "https://new20.gdtot.dad/file/2427846448"
+    },
+    {
+        title: "Superman",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        genre: "Action, Adventure, Sci-Fi",
+        cast: "Nathan Fillion, Nicholas Hoult, Rachel Brosnahan",
+        plot: "Superman, a journalist in Metropolis, embarks on a journey to reconcile his Kryptonian heritage with his human upbringing as Clark Kent.",
+        poster: "https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1327242675"
+    },
+
     {
         title: "Housefull 5A",
         year: "2025",
@@ -73,7 +96,7 @@ const allData = [
         type: "Movie",
         genre: "Drama, Crime, Thriller",
         cast: "Kamal Haasan, Nassar, Silambarasan, Trisha Krishnan",
-        plot: "In a world ruled by crime and betrayal, mafia kingpin Sakthivel and his brother Manickam rescue a young boy, Amaran, during a violent police shootout and raise him as their own. Years later, when an assassination attempt shakes Sakthivel’s empire, suspicion turns inward. Consumed by vengeance, Sakthivel sets out to destroy the very family he once built.",
+        plot: "In a world ruled by crime and betrayal, mafia kingpin Sakthivel and his brother Manickam rescue a young boy, Amaran, during a violent police shootout and raise him as their own.",
         poster: "https://media.senscritique.com/media/000022852235/300/thug_life.jpg",
         download_url: "https://new20.gdtot.dad/file/1827055186"
     },
@@ -99,7 +122,7 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZjI1ZTUyYzItZDEyMy00MTE1LWFhZmMtZWUxOThjMjU5Njk1XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/2242209494"
     },
-    
+
     {
         title: "Raid 2",
         year: "2025",

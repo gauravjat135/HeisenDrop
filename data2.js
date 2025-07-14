@@ -3,7 +3,7 @@ const allData = [
     //Movies part
 
     {
-        title: "Kesari Chapter 2 The Untold Story of Jallianwala Bagh",
+        title: "Kesari Chapter 2",
         year: "2025",
         rating: "7.5",
         type: "Movie",

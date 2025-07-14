@@ -148,8 +148,8 @@
         <main class="container mx-auto px-4 py-8">
             <section class="mb-12">
                 <div class="flex justify-between items-center mb-4">
-                    <h2 class="text-2xl font-bold">New Movies & Series</h2>
-                    <a href="movies.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                    <h2 class="text-2xl font-bold">Movies</h2>
+                    <a href="movies.html" class="text-blue-400 hover:underline">View All</a>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="movies-container">
                 </div>
@@ -162,7 +162,7 @@
             <section class="mb-12">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-2xl font-bold">Series</h2>
-                    <a href="series.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                    <a href="series.html" class="text-blue-400 hover:underline">View All</a>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6" id="series-container">
                 </div>
@@ -171,7 +171,7 @@
             <section class="mb-12">
                 <div class="flex justify-between items-center mb-4">
                     <h2 class="text-2xl font-bold">Must Watch</h2>
-                    <a href="mustWatch.html" target="_blank" class="text-blue-400 hover:underline">View All</a>
+                    <a href="mustWatch.html" class="text-blue-400 hover:underline">View All</a>
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6"
                     id="mustwatch-container"></div>
@@ -183,10 +183,23 @@
         <script>
             const movies = [
                 {
+                    title: "Aap Jaisa Koi",
+                    year: "2025",
+                    rating: "7.5",
+                    type: "Movie",
+                    quality: "HD (720p)",
+                    genre: "Romance, Drama, Comedy",
+                    cast: "Fatima Sana Shaikh, Manish Chaudhary, Namit Das, R. Madhavan",
+                    plot: "Shrirenu lives by tradition. Madhu lives unapologetically.",
+                    poster: "https://images.justwatch.com/poster/332884453/s718/aap-jaisa-koi.jpg",
+                    download_url: "https://new20.gdtot.dad/file/1117530584"
+                },
+                {
                     title: "Aankhon ki Gustaakhiyan",
                     year: "2025",
                     rating: "6.5",
                     type: "Movie",
+                    quality: "CAMRip",
                     genre: "Romance, Drama",
                     cast: "Vikrant Massey, Shanaya kapoor",
                     plot: "Explores the romance between two visually impaired characters, navigating both the joys and complexities of modern love.",
@@ -198,6 +211,7 @@
                     year: "2025",
                     rating: "7.5",
                     type: "Movie",
+                    quality: "Pre HD",
                     genre: "Action, Adventure, Sci-Fi",
                     cast: "Nathan Fillion, Nicholas Hoult, Rachel Brosnahan",
                     plot: "Superman, a journalist in Metropolis, embarks on a journey to reconcile his Kryptonian heritage with his human upbringing as Clark Kent.",
@@ -205,49 +219,66 @@
                     download_url: "https://new20.gdtot.dad/file/1327242675"
                 },
                 {
-                    title: "Housefull 5A",
-                    year: "2025",
-                    rating: "7.5",
-                    type: "Movie",
-                    genre: "Comedy, Family, Romance, Drama",
-                    cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
-                    plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
-                    poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
-                    download_url: "https://drive.usercontent.google.com/download?id=1u6o80f-32XrmTxvbePkwYlRrI468dF01&export=download&authuser=0"
-                },
-                {
-                    title: "Housefull 5B",
-                    year: "2025",
-                    rating: "7.5",
-                    type: "Movie",
-                    genre: "Comedy, Family, Romance, Drama",
-                    cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
-                    plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
-                    poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
-                    download_url: "https://drive.usercontent.google.com/download?id=1zyvp66M0TrT5x_eiHmvXpgqythGshRTF&export=download&authuser=0"
-                },
-                {
                     title: "Metro In Dino",
                     year: "2025",
                     rating: "7.5",
                     type: "Movie",
+                    quality: "HD (720p)",
                     genre: "Comedy, Family, Romance, Drama",
                     cast: "Aditya Roy Kapur, Sara Ali Khan, Anupam Kher, Neena Gupta",
                     plot: "A modern take on love and relationships, exploring the lives of various characters in a bustling city.",
                     poster: "https://static.toiimg.com/photo/122200827.cms?imgsize=139294",
                     download_url: "https://drive.usercontent.google.com/download?id=1LL3mHomaOh4NL4JTOIcmKYQMjaWZTEUs&export=download&authuser=5"
                 },
-                
+                {
+                    title: "Maalik",
+                    year: "2025",
+                    rating: "7.5",
+                    type: "Movie",
+                    quality: "CAMRip",
+                    genre: "Action, Drama, Thriller",
+                    cast: " Rajkummar Rao, Saurabh Shukla, Swanand Kirkire",
+                    plot: "Set in the rural, rusty and politically charged Allahabad of the 1980s, Maalik is a peek into the making of a dreaded gangster from a humble background with intoxication of power to rule the world.",
+                    poster: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/rajkummar-rao-in-maalik-315843439-3x4.jpg?VersionId=vbGtcSEdPCIggRMEMZ3kPKRzN17l8a6m",
+                    download_url: "https://drive.usercontent.google.com/download?id=1JfxjpT2X0TiBGUtgsagVdtNzSHZd5wam&export=download&authuser=0"
+                },
+
             ];
 
             const series = [
 
                 {
-                    id: 2,
+                    title: "Panchayat S04",
+                    year: "2025",
+                    rating: "8.1",
+                    quality: "HD (720p)",
+                    type: "TV Series",
+                    genre: "Comedy, Drama",
+                    cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
+                    plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
+                    poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
+                    download_url: "https://new20.gdtot.dad/file/2896981353"
+                },
+                {
+                   
+                    title: "Squid Game S03",
+                    year: "2025",
+                    rating: "8.7",
+                    type: "TV Series",
+                    quality: "HD (720p)",
+                    genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
+                    cast: "Lee Jung-jae, Park Hae-soo, Wi Ha-jun",
+                    plot: "A deadly survival game where contestants risk their lives for a chance at a fortune.",
+                    poster: "https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg",
+                    download_url: "https://new20.gdtot.dad/file/4111557716"
+                },
+                {
+                  
                     title: "Alice in Borderland S01",
                     year: "2020",
                     rating: "8.7",
                     type: "TV Series",
+                    quality: "HD (720p)",
                     genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
                     cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
                     plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
@@ -255,11 +286,12 @@
                     download_url: "https://drive.usercontent.google.com/download?id=1k-l5v34Bhnyy3FD4XBXTmW-N5R-cVSeG&export=download&authuser=0"
                 },
                 {
-                    id: 3,
+                   
                     title: "Alice in Borderland S02",
                     year: "2022",
                     rating: "8.7",
                     type: "TV Series",
+                    quality: "HD (720p)",
                     genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
                     cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
                     plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
@@ -274,6 +306,7 @@
                     year: "2010",
                     rating: "8.8",
                     type: "Movie",
+                    quality: "HD (720p)",
                     genre: "Action, Sci-Fi",
                     cast: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
                     plot: "A thief who uses dream-sharing tech is given the inverse task of planting an idea.",
@@ -286,6 +319,7 @@
                     year: 1994,
                     rating: "8.9/10",
                     genre: "sci-fi, Drama",
+                    quality: "HD (720p)",
                     poster: "https://upload.wikimedia.org/wikipedia/en/c/cd/The_Martian_film_poster.jpg",
                     plot: "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
                     director: "Quentin Tarantino",
@@ -300,6 +334,7 @@
                     year: "2018",
                     rating: "7.8",
                     type: "Movie",
+                    quality: "HD (720p)",
                     genre: "Action, Drama, Sport",
                     cast: "Vineet Kumar Singh, Zoya Hussain, Ravi Kishan",
                     plot: "A low caste boxer trains at a gym controlled by a local Don. Shravan falls for Mishra’s niece. The Don does not approve of this match. Shravan strives to win Sunaina’s hand in marriage and become a successful boxer while trying to avoid retaliation from the Don.",
@@ -311,6 +346,7 @@
                     title: "Padmaavat",
                     year: 2018,
                     rating: "7.7/10",
+                    quality: "HD (720p)",
                     genre: "Biography, Drama, History",
                     poster: "https://image.tmdb.org/t/p/w500/dtIceHDioZP4oHAmhHlWmDuZEM9.jpg",
                     plot: "Set in medieval Rajasthan, Queen Padmavati is married to Maharawal Ratan Singh. The kingdom is invaded by Alauddin Khilji, who becomes obsessed with Padmavati's beauty.",
@@ -330,6 +366,7 @@
       <div class="p-4">
         <h3 class="font-bold text-white">${item.title}</h3>
         <p class="text-sm text-gray-400">${item.year} • ${item.type}</p>
+        <p class="text-sm text-gray-400">${item.quality}</p>
       </div>
     `;
                 card.addEventListener("click", () => window.openMovieModal(item));

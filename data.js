@@ -189,6 +189,18 @@ const allData = [
         download_url: "https://new20.gdtot.dad/file/1481040319"
     },
 
+        {
+        title: "How to Train Your Dragon",
+        year: "2025",
+        rating: "8.1",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Animation, Adventure, Family",
+        cast: "Jay Baruchel, America Ferrera, Cate Blanchett",
+        plot: "A young Viking befriends a dragon, leading to an unexpected alliance that changes the fate of their village.",
+        poster: "https://m.media-amazon.com/images/M/MV5BODA5Y2M0NjctNWQzMy00ODRhLWE0MzUtYmE1YTAzZjYyYmQyXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1408208370"
+    },
 
     {
         title: "Housefull 5A",
@@ -244,21 +256,36 @@ const allData = [
         poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
         download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
     },
-    {
-        title: "Mission Impossible The Final Reckoning",
-        year: "2025",
-        rating: "8.5",
-        type: "Movie",
-        quality: "CAMRip",
-        genre: "Action, Adventure, Thriller",
-        cast: "Tom Cruise, Rebecca Ferguson, Simon Pegg",
-        plot: "Ethan Hunt and his team embark on their most dangerous mission yet, facing a global conspiracy that threatens the world.",
-        poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1830848499"
-    },
+    
 
     
     //Series part
+
+    {
+                    title: "Panchayat S04",
+                    year: "2025",
+                    rating: "8.1",
+                    quality: "HD (720p)",
+                    type: "TV Series",
+                    genre: "Comedy, Drama",
+                    cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
+                    plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
+                    poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
+                    download_url: "https://new20.gdtot.dad/file/2896981353"
+                },
+                {
+                   
+                    title: "Squid Game S03",
+                    year: "2025",
+                    rating: "8.7",
+                    type: "TV Series",
+                    quality: "HD (720p)",
+                    genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
+                    cast: "Lee Jung-jae, Park Hae-soo, Wi Ha-jun",
+                    plot: "A deadly survival game where contestants risk their lives for a chance at a fortune.",
+                    poster: "https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg",
+                    download_url: "https://new20.gdtot.dad/file/4111557716"
+                },
     {
         id: 2,
         title: "Alice in Borderland S01",

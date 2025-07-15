@@ -3,6 +3,19 @@ const allData = [
     //Movies part
 
     {
+        title: "Mission Impossible The Final Reckoning",
+        year: "2025",
+        rating: "8.5",
+        type: "Movie",
+        quality: "CAMRip",
+        genre: "Action, Adventure, Thriller",
+        cast: "Tom Cruise, Rebecca Ferguson, Simon Pegg",
+        plot: "Ethan Hunt and his team embark on their most dangerous mission yet, facing a global conspiracy that threatens the world.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1830848499"
+    },
+
+    {
         title: "Kesari Chapter 2",
         year: "2025",
         rating: "7.5",

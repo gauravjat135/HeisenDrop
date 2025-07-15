@@ -3,6 +3,32 @@ const allData = [
     //Movies part
 
     {
+        title: "Kesari Veer",
+        year: "2025",
+        rating: "7.1",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: " Drama, History",
+        cast: "Sooraj Pancholi, Suniel Shetty, Vivek Oberoi",
+        plot: "The movie narrates the tale of Hamirji Gohil, a brave warrior who fought against the Tughlaq Empire to protect the Somnath Temple and the Hindu faith.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDU2MjhkMmYtMzc4Ni00Y2VmLTg3YjMtYTljNzViOWJhNzQ0XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1476779065"
+    },
+
+        {
+        title: "Raid 2",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Action, Crime, Drama",
+        cast: "Ajay Devgn, Ritesh Deshmukh, Vaani Kapoor",
+        plot: "After exposing corruption, the protagonist must go deeper into the underworld.",
+        poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
+        download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
+    },
+
+        {
         title: "Mission Impossible The Final Reckoning",
         year: "2025",
         rating: "8.5",
@@ -14,9 +40,8 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1830848499"
     },
-
     {
-        title: "Kesari Chapter 2",
+        title: "Kesari Chapter 2 The Untold Story of Jallianwala Bagh",
         year: "2025",
         rating: "7.5",
         type: "Movie",

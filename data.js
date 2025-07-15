@@ -125,6 +125,19 @@ const allData = [
     },
 
     {
+        title: "Heads of State",
+        year: "2025",
+        rating: "8.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Action, Adventure, Thriller",
+        cast: "John Cena, Idris Elba, Priyanka Chopra",
+        plot: "A high-stakes action thriller where a former CIA operative teams up with a tech genius to prevent a global catastrophe.",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIq_H7SAXy7_QmN52XIVNEeK8vCNrQXJeMRA1qpMQflR7cGQgY_jGGOTpf9AnUhgkrQk",
+        download_url: "https://new20.gdtot.dad/file/996499174"
+    },
+
+    {
         title: "Thug Life",
         year: "2025",
         rating: "7.5",
@@ -162,19 +175,20 @@ const allData = [
         poster: "https://images.filmibeat.com/ph-big/2025/05/sitaare-zameen-par1747294849_1.jpg",
         download_url: "https://new20.gdtot.dad/file/1277221024"
     },
-
     {
-        title: "Heads of State",
+        title: "Kuberaa",
         year: "2025",
-        rating: "8.5",
+        rating: "7.9",
         type: "Movie",
-        quality: "HD (720p)",
-        genre: "Action, Adventure, Thriller",
-        cast: "John Cena, Idris Elba, Priyanka Chopra",
-        plot: "A high-stakes action thriller where a former CIA operative teams up with a tech genius to prevent a global catastrophe.",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnIq_H7SAXy7_QmN52XIVNEeK8vCNrQXJeMRA1qpMQflR7cGQgY_jGGOTpf9AnUhgkrQk",
-        download_url: "https://new20.gdtot.dad/file/996499174"
+        genre: "crime, drama, thriller",
+        quality: "CAMRip",
+        cast: "Dhanush, Nayanthara, Andrea Jeremiah",
+        plot: "A ruthless billionaire, Neeraj, uses beggars as benamis to launder money, with the help of a disgraced civil submit servant, Deepak",
+        poster: "https://m.media-amazon.com/images/M/MV5BMTBhYWJkZTAtOTM2MS00OGExLTkxNWMtMTQxNjAzNDM0MDUwXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1497612935"
     },
+
+
 
     {
         title: "Kannappa",
@@ -189,18 +203,7 @@ const allData = [
         download_url: "https://new20.gdtot.dad/file/1481040319"
     },
 
-        {
-        title: "How to Train Your Dragon",
-        year: "2025",
-        rating: "8.1",
-        type: "Movie",
-        quality: "HD (720p)",
-        genre: "Animation, Adventure, Family",
-        cast: "Jay Baruchel, America Ferrera, Cate Blanchett",
-        plot: "A young Viking befriends a dragon, leading to an unexpected alliance that changes the fate of their village.",
-        poster: "https://m.media-amazon.com/images/M/MV5BODA5Y2M0NjctNWQzMy00ODRhLWE0MzUtYmE1YTAzZjYyYmQyXkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1408208370"
-    },
+
 
     {
         title: "Housefull 5A",
@@ -220,72 +223,146 @@ const allData = [
         rating: "7.5",
         type: "Movie",
         quality: "HD (720p)",
-        genre: "Comedy, Family, Romance, Drama",
-        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
-        plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
+        genre: "Drama, Thriller",
+        cast: "Sinbad, Taraji P. Henson, Teyana Taylor",
+        plot: " Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
         poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
         download_url: "https://drive.usercontent.google.com/download?id=1zyvp66M0TrT5x_eiHmvXpgqythGshRTF&export=download&authuser=0"
     },
-
-
-
-
-
     {
-        title: "Kesari Veer",
+        title: "KO",
         year: "2025",
-        rating: "7.1",
+        rating: "7.2",
         type: "Movie",
         quality: "HD (720p)",
-        genre: " Drama, History",
-        cast: "Sooraj Pancholi, Suniel Shetty, Vivek Oberoi",
-        plot: "The movie narrates the tale of Hamirji Gohil, a brave warrior who fought against the Tughlaq Empire to protect the Somnath Temple and the Hindu faith.",
-        poster: "https://m.media-amazon.com/images/M/MV5BZDU2MjhkMmYtMzc4Ni00Y2VmLTg3YjMtYTljNzViOWJhNzQ0XkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1476779065"
+        genre: "Action, Thriller",
+        cast: " Maleaume Paquin, Mathieu Lestrade",
+        plot: "A former fighter must find the missing son of an opponent he accidentally killed years ago, taking on a brutally violent crime gang in Marseille.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZTExNjM4NzAtY2FiZS00M2VmLWE1MjUtNWM1MTk3YTg1ZjQwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/967641071"
     },
-
     {
-        title: "Raid 2",
+        title: "Straw",
         year: "2025",
-        rating: "7.5",
+        rating: "6.5",
         type: "Movie",
-        quality: "HD (720p)",
-        genre: "Action, Crime, Drama",
-        cast: "Ajay Devgn, Ritesh Deshmukh, Vaani Kapoor",
-        plot: "After exposing corruption, the protagonist must go deeper into the underworld.",
-        poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
-        download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
+        quality: "Full HD (1080p)",
+        genre: "Comedy, Family, Romance, Drama",
+        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
+        plot: "A single mother navigates a series of unfortunate events, leading her down an unforeseen path.",
+        poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F20a067df3a2ba64975d4f73e5fa6d757.jpg",
+        download_url: "https://new20.gdtot.dad/file/2387493585"
     },
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
     //Series part
 
+
     {
-                    title: "Panchayat S04",
-                    year: "2025",
-                    rating: "8.1",
-                    quality: "HD (720p)",
-                    type: "TV Series",
-                    genre: "Comedy, Drama",
-                    cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
-                    plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
-                    poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
-                    download_url: "https://new20.gdtot.dad/file/2896981353"
-                },
-                {
-                   
-                    title: "Squid Game S03",
-                    year: "2025",
-                    rating: "8.7",
-                    type: "TV Series",
-                    quality: "HD (720p)",
-                    genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
-                    cast: "Lee Jung-jae, Park Hae-soo, Wi Ha-jun",
-                    plot: "A deadly survival game where contestants risk their lives for a chance at a fortune.",
-                    poster: "https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg",
-                    download_url: "https://new20.gdtot.dad/file/4111557716"
-                },
+        title: "Panchayat S04",
+        year: "2025",
+        rating: "8.1",
+        quality: "HD (720p)",
+        type: "TV Series",
+        genre: "Comedy, Drama",
+        spcl: "You need to extract the file after downloading.",
+        cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
+        plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
+        poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
+        download_url: "https://new20.gdtot.dad/file/2896981353"
+    },
+    {
+
+        title: "Squid Game S03",
+        year: "2025",
+        rating: "8.7",
+        type: "TV Series",
+        quality: "HD (720p)",
+        genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
+        cast: "Lee Jung-jae, Park Hae-soo, Wi Ha-jun",
+        spcl: "You need to extract the file after downloading.",
+        plot: "A deadly survival game where contestants risk their lives for a chance at a fortune.",
+        poster: "https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg",
+        download_url: "https://new20.gdtot.dad/file/4111557716"
+    },
+    {
+
+        title: "Mistry",
+        year: "2025",
+        rating: "6.7",
+        type: "TV Series",
+        quality: "HD (720p)",
+        genre: "Comedy, Mystery",
+        cast: "Mona Singh, Ram Kapoor, Shikha Talsania",
+        plot: "Armaan Mistry is a brilliant ex-cop, who can solve the toughest of cases with no qualms. Just one problem: he has extreme OCD.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDNhN2FmNjgtOGQ4MS00NjFjLWJkYjQtYTE1ZTZkZDViNzMyXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/2947052023"
+    },
+    {
+
+        title: "Mercy for None S01",
+        year: "2025",
+        rating: "7.5",
+        type: "TV Series",
+        quality: "HD (720p)",
+        genre: "Action & Adventure,Thriller",
+        cast: "Huh Joon-ho, So Ji-sub, Tiger Lee",
+        plot: "After severing ties with his gang, a former gangster returns to uncover the truth behind his brother’s death — embarking on a relentless path of revenge.",
+        poster: "https://m.media-amazon.com/images/M/MV5BMmY5MzdmYjEtY2RhMS00ZGNkLTliOGEtY2M4NTBmZmU5NDc1XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3365580592"
+    },
+    {
+
+        title: "The Waterfront S01",
+        year: "2025",
+        rating: "6.7",
+        type: "TV Series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        genre: "Drama, Thriller",
+        cast: "Jason Bateman, Laura Linney, Sofia Hublitz",
+        plot: "A prominent North Carolina fishing family wades into treacherous waters to keep their crumbling business empire afloat.",
+        poster: "https://m.media-amazon.com/images/M/MV5BYjM3YTEwNDEtNzA4OS00NjhkLThiNjMtYTMxZTE0ZmZkMDg0XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/4301581414"
+    },
+    {
+
+        title: "Dabba Cartel S01",
+        year: "2025",
+        rating: "7.5",
+        type: "TV Series",
+        quality: "HD (720p)",
+        genre: "Crime, Drama, TV Shows Web Series",
+        cast: " Parminder Singh Kainth, Sai Tamhankar, Shabana Azmi, Shalini Pandey",
+        plot: "When an investigation into a pharma company hits close to home, five women launch a tiffin service with a secret ingredient.",
+        poster: "https://resizing.flixster.com/Ki8OEIfnV2jvB1rbA2bjjuBsb58=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZmIzNTBiOTktOTA0Zi00OGZjLTgzMzAtZmIxYmE1MzVjMjFjLmpwZw==",
+        download_url: "https://new20.gdtot.dad/file/3275413092"
+    },
+    {
+        title: "IC 814 The Kandahar Hijack S01",
+        year: "2024",
+        rating: "6.7",
+        type: "TV Series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        genre: "Drama, TV Shows Web Series, War & Politics",
+        cast: " Pooja Gaur, Vijay Varma, Yashpal Sharma",
+        plot: "Based on real events, this gripping series chronicles the longest hijack in the history of Indian aviation.",
+        poster: "https://m.media-amazon.com/images/M/MV5BNTk4ZDc4OTUtYmE3Mi00M2IzLWJhZWMtZTRmZTc2YzZkOGRmXkEyXkFqcGc@._V1_QL75_UX500_CR0,172,500,281_.jpg",
+        download_url: "https://new20.gdtot.dad/file/2571470908"
+    },
     {
         id: 2,
         title: "Alice in Borderland S01",
@@ -293,6 +370,7 @@ const allData = [
         rating: "8.7",
         type: "series",
         quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
         genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
         cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
@@ -306,6 +384,7 @@ const allData = [
         rating: "8.7",
         type: "series",
         quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
         genre: "Action & Adventure, Drama, Mystery, Sci-Fi & Fantasy, Thriller",
         cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",

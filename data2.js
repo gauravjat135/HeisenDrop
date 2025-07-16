@@ -40,6 +40,18 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1830848499"
     },
+        {
+        title: "Final Destination Bloodlines",
+        year: "2025",
+        rating: "7.1",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Horror, Mystery",
+        cast: "Richard Harmon, Rya Kihlstedt, Teo Briones",
+        plot: "Plagued by a violent recurring nightmare, college student Stefanie heads home to track down the one person.",
+        poster: "http://www.impawards.com/2025/posters/final_destination_bloodlines.jpg",
+        download_url: "https://new20.gdtot.dad/file/939601470"
+    },
     {
         title: "Kesari Chapter 2 The Untold Story of Jallianwala Bagh",
         year: "2025",

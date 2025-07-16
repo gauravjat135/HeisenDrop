@@ -3,6 +3,19 @@ const allData = [
     //Movies part
 
     {
+        title: "Straw",
+        year: "2025",
+        rating: "6.5",
+        type: "Movie",
+        quality: "Full HD (1080p)",
+        genre: "Comedy, Family, Romance, Drama",
+        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
+        plot: "A single mother navigates a series of unfortunate events, leading her down an unforeseen path.",
+        poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F20a067df3a2ba64975d4f73e5fa6d757.jpg",
+        download_url: "https://new20.gdtot.dad/file/2387493585"
+    },
+
+    {
         title: "Kesari Veer",
         year: "2025",
         rating: "7.1",

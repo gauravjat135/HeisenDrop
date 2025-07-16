@@ -62,7 +62,7 @@ const allData = [
         genre: "Horror, Mystery",
         cast: "Richard Harmon, Rya Kihlstedt, Teo Briones",
         plot: "Plagued by a violent recurring nightmare, college student Stefanie heads home to track down the one person.",
-        poster: "http://www.impawards.com/2025/posters/final_destination_bloodlines.jpg",
+        poster: "https://m.media-amazon.com/images/M/MV5BYWI0ZjgwOWItNDc0Mi00MmMxLWIyMGMtZTlhMTc1ZDg2ZDM2XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/939601470"
     },
     {

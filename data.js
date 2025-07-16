@@ -171,7 +171,7 @@ const allData = [
         genre: "Science Fiction, Thriller",
         cast: "Jen Van Epps, Jenna Davis, Violet McGraw",
         plot: "After the underlying tech for M3GAN is stolen and misused by a powerful defense contractor to create a military-grade weapon known as Amelia.",
-        poster: "http://www.impawards.com/2025/posters/megan_two_point_o_ver2.jpg",
+        poster: "https://m.media-amazon.com/images/M/MV5BOWM0NjdkYTUtZTc3Yy00ZmFmLWEwOTQtYTBlM2QzZTE3ODIxXkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1165155063"
     },
 
@@ -253,18 +253,7 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZTExNjM4NzAtY2FiZS00M2VmLWE1MjUtNWM1MTk3YTg1ZjQwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         download_url: "https://new20.gdtot.dad/file/967641071"
     },
-    {
-        title: "Straw",
-        year: "2025",
-        rating: "6.5",
-        type: "Movie",
-        quality: "Full HD (1080p)",
-        genre: "Comedy, Family, Romance, Drama",
-        cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
-        plot: "A single mother navigates a series of unfortunate events, leading her down an unforeseen path.",
-        poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F20a067df3a2ba64975d4f73e5fa6d757.jpg",
-        download_url: "https://new20.gdtot.dad/file/2387493585"
-    },
+    
 
 
 

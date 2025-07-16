@@ -173,7 +173,7 @@ const allData = [
         cast: "Aamir Khan, Darsheel Safary, Tanay Chheda",
         plot: "A disgraced basketball coach is given the chance to coach a team of players who are intellectually disabled, and soon realizes they just might have what it takes to make it to the national championships.",
         poster: "https://images.filmibeat.com/ph-big/2025/05/sitaare-zameen-par1747294849_1.jpg",
-        download_url: "https://new20.gdtot.dad/file/1277221024"
+        download_url: "https://new20.gdtot.dad/file/1439197417"
     },
     {
         title: "Kuberaa",

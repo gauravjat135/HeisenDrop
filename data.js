@@ -162,6 +162,18 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZjI1ZTUyYzItZDEyMy00MTE1LWFhZmMtZWUxOThjMjU5Njk1XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/2242209494"
     },
+    {
+        title: "M3GAN 2.0",
+        year: "2025",
+        rating: "7.1",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Science Fiction, Thriller",
+        cast: "Jen Van Epps, Jenna Davis, Violet McGraw",
+        plot: "After the underlying tech for M3GAN is stolen and misused by a powerful defense contractor to create a military-grade weapon known as Amelia.",
+        poster: "http://www.impawards.com/2025/posters/megan_two_point_o_ver2.jpg",
+        download_url: "https://new20.gdtot.dad/file/1165155063"
+    },
 
     {
         title: "Sitaare Zameen Par",
@@ -169,7 +181,7 @@ const allData = [
         rating: "7.9",
         type: "Movie",
         genre: "Drama, Family, comedy",
-        quality: "CAMRip",
+        quality: "HD (720p)",
         cast: "Aamir Khan, Darsheel Safary, Tanay Chheda",
         plot: "A disgraced basketball coach is given the chance to coach a team of players who are intellectually disabled, and soon realizes they just might have what it takes to make it to the national championships.",
         poster: "https://images.filmibeat.com/ph-big/2025/05/sitaare-zameen-par1747294849_1.jpg",

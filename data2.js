@@ -51,7 +51,7 @@ const allData = [
         cast: "Ajay Devgn, Ritesh Deshmukh, Vaani Kapoor",
         plot: "After exposing corruption, the protagonist must go deeper into the underworld.",
         poster: "https://tse3.mm.bing.net/th/id/OIP.u1WlBRRAiYdCuii6NgCtsgHaE8?pid=Api",
-        download_url: "https://drive.usercontent.google.com/download?id=1v52WMVypfzvjOQYNBNzbOE2FO_oqL2mx&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1333972866"
     },
 
         {
@@ -118,7 +118,7 @@ const allData = [
         runtime: "164 min",
         detail: "must watch",
         type: "Movie",
-        download_url: "https://drive.usercontent.google.com/download?id=1tFaFdCtY1K_JcvcGJwxesYyuTYfdGcl3&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/3047640833"
     },
     {
         title: "Inception",
@@ -131,7 +131,7 @@ const allData = [
         cast: "Leonardo DiCaprio, Joseph Gordon-Levitt, Ellen Page",
         plot: "A thief who uses dream-sharing tech is given the inverse task of planting an idea.",
         poster: "https://image.tmdb.org/t/p/w500/edv5CZvWj09upOsy2Y6IwDhK8bt.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=1yof0tCINz37iEmKb7EQak9p1FRaLJJjl&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1649989660"
     },
     {
         id: 3,
@@ -148,7 +148,7 @@ const allData = [
         runtime: "154 min",
         language: "English",
         type: "Movie",
-        download_url: "https://drive.usercontent.google.com/download?id=1cU4gl6GvHJllEmPW7miyipe_8ULnOPjU&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1686263584"
     },
     {
         title: "Mukkabaaz",
@@ -161,21 +161,10 @@ const allData = [
         cast: "Vineet Kumar Singh, Zoya Hussain, Ravi Kishan",
         plot: "A low caste boxer trains at a gym controlled by a local Don. Shravan falls for Mishra’s niece. The Don does not approve of this match. Shravan strives to win Sunaina’s hand in marriage and become a successful boxer while trying to avoid retaliation from the Don.",
         poster: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mukkabaaz-et00059419-07-07-2017-05-57-42.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=1W3fDQXUREvs6-zdywBzEwlrfdL9IOB-E&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1507652994"
     },
 
-    {
-        title: "Adipurush",
-        year: "2023",
-        rating: "7.8",
-        type: "Movie",
-        quality: "HD (720p)",
-        genre: "Action, Adventure, Drama",
-        cast: "Prabhas, Kriti Sanon, Saif Ali Khan",
-        plot: "A mythological epic based on the Ramayana, depicting the battle between Lord Rama and Ravana.",
-        poster: "https://filmfare.wwmindia.com/content/2022/sep/adipurush-poster-first-look.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=10LDY_CgQ59y4lbgT3-a_vzjTmRcMYYf5&export=download&authuser=0"
-    },
+
 
 
 

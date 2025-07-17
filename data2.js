@@ -3,6 +3,19 @@ const allData = [
     //Movies part
 
     {
+        title: "Karate Kid Legends",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Action, Adventure, Drama",
+        cast: "Jackie Chan",
+        plot: "After a family tragedy, kung fu prodigy Li Fong is uprooted from his home in Beijing and forced to move to New York City with his mother.",
+        poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F20a067df3a2ba64975d4f73e5fa6d757.jpg",
+        download_url: "https://new20.gdtot.dad/file/1048127467"
+    },
+
+    {
         title: "Straw",
         year: "2025",
         rating: "6.5",

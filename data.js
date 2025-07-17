@@ -48,7 +48,7 @@ const allData = [
         cast: "Aditya Roy Kapur, Sara Ali Khan, Anupam Kher, Neena Gupta",
         plot: "A modern take on love and relationships, exploring the lives of various characters in a bustling city.",
         poster: "https://static.toiimg.com/photo/122200827.cms?imgsize=139294",
-        download_url: "https://drive.usercontent.google.com/download?id=1LL3mHomaOh4NL4JTOIcmKYQMjaWZTEUs&export=download&authuser=5"
+        download_url: "https://new20.gdtot.dad/file/1576134242"
     },
     {
         title: "Maalik",
@@ -60,7 +60,7 @@ const allData = [
         cast: " Rajkummar Rao, Saurabh Shukla, Swanand Kirkire",
         plot: "Set in the rural, rusty and politically charged Allahabad of the 1980s, Maalik is a peek into the making of a dreaded gangster from a humble background with intoxication of power to rule the world.",
         poster: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/rajkummar-rao-in-maalik-315843439-3x4.jpg?VersionId=vbGtcSEdPCIggRMEMZ3kPKRzN17l8a6m",
-        download_url: "https://drive.usercontent.google.com/download?id=1JfxjpT2X0TiBGUtgsagVdtNzSHZd5wam&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1366477640"
     },
     {
         title: "Almost Cops",
@@ -227,7 +227,7 @@ const allData = [
         cast: "Akshay Kumar, Riteish Deshmukh, jacqueline Fernandez, nana Patekar",
         plot: "Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
         poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=1u6o80f-32XrmTxvbePkwYlRrI468dF01&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1517860235"
     },
     {
         title: "Housefull 5B",
@@ -239,7 +239,7 @@ const allData = [
         cast: "Sinbad, Taraji P. Henson, Teyana Taylor",
         plot: " Housefull 5 has been released in 2 versions, Housefull 5A and 5B. Both have different climaxes, different killers and different endings. The first two hours are the same in both versions, but the last 20 minutes differ.",
         poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=1zyvp66M0TrT5x_eiHmvXpgqythGshRTF&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/1518789646"
     },
     {
         title: "KO",
@@ -376,7 +376,7 @@ const allData = [
         cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
         poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=1k-l5v34Bhnyy3FD4XBXTmW-N5R-cVSeG&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/4344941599"
     },
     {
         id: 3,
@@ -390,7 +390,7 @@ const allData = [
         cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
         poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
-        download_url: "https://drive.usercontent.google.com/download?id=147QDGJv8BnqJT6ReesVjtIh1BGM_WOZX&export=download&authuser=0"
+        download_url: "https://new20.gdtot.dad/file/5702148078"
     },
 
 

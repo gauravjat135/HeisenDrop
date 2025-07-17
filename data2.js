@@ -11,7 +11,7 @@ const allData = [
         genre: "Action, Adventure, Drama",
         cast: "Jackie Chan",
         plot: "After a family tragedy, kung fu prodigy Li Fong is uprooted from his home in Beijing and forced to move to New York City with his mother.",
-        poster: "https://images.plex.tv/photo?size=large-1280&url=https%3A%2F%2Fmetadata-static.plex.tv%2F2%2Fgracenote%2F20a067df3a2ba64975d4f73e5fa6d757.jpg",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTFYgn4utrBaAE_cy3Sfl91Sj8TzRLc0afKhyb-odq3Q7pcvvps9JFyU&s=10",
         download_url: "https://new20.gdtot.dad/file/1048127467"
     },
 

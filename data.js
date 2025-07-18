@@ -519,7 +519,7 @@ const allData = [
         title: "Dabba Cartel S01",
         year: "2025",
         rating: "7.5",
-        type: "TV Series",
+        type: "Series",
         quality: "HD (720p)",
         genre: "Crime, Drama, TV Shows Web Series",
         cast: " Parminder Singh Kainth, Sai Tamhankar, Shabana Azmi, Shalini Pandey",

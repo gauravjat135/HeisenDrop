@@ -332,6 +332,18 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BYWI0ZjgwOWItNDc0Mi00MmMxLWIyMGMtZTlhMTc1ZDg2ZDM2XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/939601470"
     },
+        {
+        title: "Retro",
+        year: "2025",
+        rating: "7.1",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: " Action, Crime, Drama",
+        cast: " Prakash Raj, Suriya, Vidhu",
+        plot: "Paarivel Kannan’s marriage is broken by his fiancé, Rukmani, due to his violent ways. In an attempt to win her back.",
+        poster: "https://m.media-amazon.com/images/M/MV5BNmE5MjE5ZmMtOTMzMi00OWE3LWFlN2YtMjhiNDI3NmYzYzIzXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1815768738"
+    },
     {
         title: "Kesari Chapter 2 The Untold Story of Jallianwala Bagh",
         year: "2025",

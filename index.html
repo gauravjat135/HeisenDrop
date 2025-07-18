@@ -143,6 +143,11 @@
 
         <!-- Mobile Search Bar -->
 
+        <div class="tabs flex justify-center ma-2 space-x-4 text-gray-400 font-semibold">
+  <a class="bg-purple-600 hover:bg-purple-800 text-white px-4 py-2 rounded transition text-lg" href="https://s1.kriket.dad/" target="_blank">Match</a>
+</div>
+
+
 
         <!-- Main Content -->
         <main class="container mx-auto px-4 py-8">
@@ -387,46 +392,6 @@
                 container.appendChild(card);
             }
 
-            // function renderAll() {
-            //     const moviesContainer = document.getElementById("movies-container");
-            //     const seriesContainer = document.getElementById("series-container");
-
-            //     const mustwatchContainer = document.getElementById("mustwatch-container");
-
-            //     moviesContainer.innerHTML = "";
-            //     seriesContainer.innerHTML = "";
-
-            //     mustwatchContainer.innerHTML = "";
-
-            //     movies.forEach((m) => renderCard(m, moviesContainer));
-            //     series.forEach((s) => renderCard(s, seriesContainer));
-
-            //     mustwatch.forEach((m) => renderCard(m, mustwatchContainer));
-            // }
-
-            // function renderAll() {
-            //     const moviesContainer = document.getElementById("movies-container");
-            //     const seriesContainer = document.getElementById("series-container");
-            //     const mustwatchContainer = document.getElementById("mustwatch-container");
-
-            //     const moviesSection = moviesContainer.closest("section");
-            //     const seriesSection = seriesContainer.closest("section");
-            //     const mustwatchSection = mustwatchContainer.closest("section");
-
-            //     // Ensure sections are shown again
-            //     moviesSection.style.display = "block";
-            //     seriesSection.style.display = "block";
-            //     mustwatchSection.style.display = "block";
-
-            //     // Clear and render
-            //     moviesContainer.innerHTML = "";
-            //     seriesContainer.innerHTML = "";
-            //     mustwatchContainer.innerHTML = "";
-
-            //     movies.forEach((m) => renderCard(m, moviesContainer));
-            //     series.forEach((s) => renderCard(s, seriesContainer));
-            //     mustwatch.forEach((mw) => renderCard(mw, mustwatchContainer));
-            // }
 
 
             function renderAll() {
@@ -458,111 +423,7 @@
 
 
 
-            // function filterAndRender(query) {
-            //     const q = query.toLowerCase();
 
-            //     const moviesContainer = document.getElementById("movies-container");
-            //     const seriesContainer = document.getElementById("series-container");
-
-            //     const mustwatchContainer = document.getElementById("mustwatch-container");
-
-            //     const moviesSection = moviesContainer.closest("section");
-            //     const seriesSection = seriesContainer.closest("section");
-
-            //     const mustwatchSection = mustwatchContainer.closest("section");
-
-            //     // Always start by hiding all
-            //     moviesSection.style.display = "none";
-            //     seriesSection.style.display = "none";
-
-            //     mustwatchSection.style.display = "none";
-
-            //     moviesContainer.innerHTML = "";
-            //     seriesContainer.innerHTML = "";
-
-            //     mustwatchContainer.innerHTML = "";
-
-            //     // const filteredMovies = movies.filter((m) => m.title.toLowerCase().includes(q));
-            //     // const filteredSeries = series.filter((s) => s.title.toLowerCase().includes(q));
-
-            //     // const filteredMustWatch = mustwatch.filter((mw) => mw.title.toLowerCase().includes(q));
-
-            //     const filteredMovies = allData.filter((m) =>
-            //         m.title.toLowerCase().includes(q) && m.type.toLowerCase().includes("movie")
-            //     );
-            //     const filteredSeries = allData.filter((s) =>
-            //         s.title.toLowerCase().includes(q) && s.type.toLowerCase().includes("series")
-            //     );
-            //     const filteredMustWatch = allData.filter((mw) =>
-            //         mw.title.toLowerCase().includes(q) && (mw.mustwatch === true || mw.rating >= 8.5) // Optional logic
-            //     );
-
-
-            //     if (filteredMovies.length) {
-            //         moviesSection.style.display = "block";
-            //         filteredMovies.forEach((m) => renderCard(m, moviesContainer));
-            //     }
-
-            //     if (filteredSeries.length) {
-            //         seriesSection.style.display = "block";
-            //         filteredSeries.forEach((s) => renderCard(s, seriesContainer));
-            //     }
-
-
-
-            //     if (filteredMustWatch.length) {
-            //         mustwatchSection.style.display = "block";
-            //         filteredMustWatch.forEach((mw) => renderCard(mw, mustwatchContainer));
-            //     }
-
-
-            //     // const noResults = document.getElementById("no-results");
-            //     // if (
-            //     //     !filteredMovies.length &&
-            //     //     !filteredSeries.length &&
-            //     //     !filteredMustWatch.length
-            //     // ) {
-            //     //     noResults.classList.remove("hidden");
-            //     // } else {
-            //     //     noResults.classList.add("hidden");
-            //     // }
-
-            //     const noResults = document.getElementById("no-results");
-
-            //     if (query.trim() === "") {
-            //         // Reset to default cards
-            //         renderAll();
-            //         noResults.classList.add("hidden");
-            //         return;
-            //     }
-
-            //     if (
-            //         !filteredMovies.length &&
-            //         !filteredSeries.length &&
-            //         !filteredMustWatch.length
-            //     ) {
-            //         noResults.classList.remove("hidden");
-            //     } else {
-            //         noResults.classList.add("hidden");
-
-            //         if (filteredMovies.length) {
-            //             moviesSection.style.display = "block";
-            //             filteredMovies.forEach((m) => renderCard(m, moviesContainer));
-            //         }
-
-            //         if (filteredSeries.length) {
-            //             seriesSection.style.display = "block";
-            //             filteredSeries.forEach((s) => renderCard(s, seriesContainer));
-            //         }
-
-            //         if (filteredMustWatch.length) {
-            //             mustwatchSection.style.display = "block";
-            //             filteredMustWatch.forEach((mw) => renderCard(mw, mustwatchContainer));
-            //         }
-            //     }
-
-
-            // }
 
 
 

@@ -260,7 +260,7 @@
                     download_url: "https://new20.gdtot.dad/file/2896981353"
                 },
                 {
-                   
+
                     title: "Squid Game S03",
                     year: "2025",
                     rating: "8.7",
@@ -273,7 +273,7 @@
                     download_url: "https://new20.gdtot.dad/file/4111557716"
                 },
                 {
-                   
+
                     title: "Mistry",
                     year: "2025",
                     rating: "6.7",
@@ -286,7 +286,7 @@
                     download_url: "https://new20.gdtot.dad/file/2947052023"
                 },
                 {
-                   
+
                     title: "Mercy for None S01",
                     year: "2025",
                     rating: "7.5",
@@ -299,7 +299,7 @@
                     download_url: "https://new20.gdtot.dad/file/3365580592"
                 },
                 {
-                   
+
                     title: "Dabba Cartel S01",
                     year: "2025",
                     rating: "7.5",
@@ -311,7 +311,7 @@
                     poster: "https://resizing.flixster.com/Ki8OEIfnV2jvB1rbA2bjjuBsb58=/ems.cHJkLWVtcy1hc3NldHMvdHZzZXJpZXMvZmIzNTBiOTktOTA0Zi00OGZjLTgzMzAtZmIxYmE1MzVjMjFjLmpwZw==",
                     download_url: "https://new20.gdtot.dad/file/3275413092"
                 },
-                
+
             ];
 
             const mustwatch = [
@@ -404,7 +404,35 @@
             //     mustwatch.forEach((m) => renderCard(m, mustwatchContainer));
             // }
 
+            // function renderAll() {
+            //     const moviesContainer = document.getElementById("movies-container");
+            //     const seriesContainer = document.getElementById("series-container");
+            //     const mustwatchContainer = document.getElementById("mustwatch-container");
+
+            //     const moviesSection = moviesContainer.closest("section");
+            //     const seriesSection = seriesContainer.closest("section");
+            //     const mustwatchSection = mustwatchContainer.closest("section");
+
+            //     // Ensure sections are shown again
+            //     moviesSection.style.display = "block";
+            //     seriesSection.style.display = "block";
+            //     mustwatchSection.style.display = "block";
+
+            //     // Clear and render
+            //     moviesContainer.innerHTML = "";
+            //     seriesContainer.innerHTML = "";
+            //     mustwatchContainer.innerHTML = "";
+
+            //     movies.forEach((m) => renderCard(m, moviesContainer));
+            //     series.forEach((s) => renderCard(s, seriesContainer));
+            //     mustwatch.forEach((mw) => renderCard(mw, mustwatchContainer));
+            // }
+
+
             function renderAll() {
+                const isMobile = window.innerWidth < 640; // Tailwind sm breakpoint
+                const limit = isMobile ? 4 : 5;
+
                 const moviesContainer = document.getElementById("movies-container");
                 const seriesContainer = document.getElementById("series-container");
                 const mustwatchContainer = document.getElementById("mustwatch-container");
@@ -413,20 +441,21 @@
                 const seriesSection = seriesContainer.closest("section");
                 const mustwatchSection = mustwatchContainer.closest("section");
 
-                // Ensure sections are shown again
+                // Reset visibility
                 moviesSection.style.display = "block";
                 seriesSection.style.display = "block";
                 mustwatchSection.style.display = "block";
 
-                // Clear and render
+                // Clear containers
                 moviesContainer.innerHTML = "";
                 seriesContainer.innerHTML = "";
                 mustwatchContainer.innerHTML = "";
 
-                movies.forEach((m) => renderCard(m, moviesContainer));
-                series.forEach((s) => renderCard(s, seriesContainer));
-                mustwatch.forEach((mw) => renderCard(mw, mustwatchContainer));
+                movies.slice(0, limit).forEach((m) => renderCard(m, moviesContainer));
+                series.slice(0, limit).forEach((s) => renderCard(s, seriesContainer));
+                mustwatch.slice(0, limit).forEach((mw) => renderCard(mw, mustwatchContainer));
             }
+
 
 
             // function filterAndRender(query) {

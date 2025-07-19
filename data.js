@@ -429,6 +429,19 @@ const allData = [
         poster: "https://assets-in.bmscdn.com/iedb/movies/images/mobile/thumbnail/xlarge/mukkabaaz-et00059419-07-07-2017-05-57-42.jpg",
         download_url: "https://new20.gdtot.dad/file/1507652994"
     },
+    {
+        title: "Tumbbad",
+        year: "2018",
+        rating: "7.8",
+        type: "Movie",
+        quality: "Full HD (1080p)",
+        detail: "must watch",
+        genre: "Action, Drama, Horror",
+        cast: "Ronjini Chakraborty, Rudra Soni, Sohum Shah",
+        plot: "India, 1918. On the outskirts of Tumbbad, a cursed village where it always rains, Vinayak, along with his mother and his brother.",
+        poster: "https://m.media-amazon.com/images/M/MV5BMmExZDcyNDItMGRmYy00ZWE5LTkzMzgtZDAyMzE4MGU3YmY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3258359053"
+    },
 
 
 
@@ -558,6 +571,22 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BNTk4ZDc4OTUtYmE3Mi00M2IzLWJhZWMtZTRmZTc2YzZkOGRmXkEyXkFqcGc@._V1_QL75_UX500_CR0,172,500,281_.jpg",
         download_url: "https://new20.gdtot.dad/file/2571470908"
     },
+
+    {
+                
+                    title: "Scam 1992 – The Harshad Mehta Story",
+                    year: 2020,
+                    rating: "7.7",
+                    quality: "HD (720p)",
+                    genre: "Biography, Drama",
+                    poster: "https://m.media-amazon.com/images/M/MV5BNGRkOTVjODgtNTBmZS00MDQ3LWE3ZjQtM2ZiNDQ3OWJkMjM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+                    plot: "Set in 1980’s & 90’s Bombay, Scam 1992 follows the life of Harshad Mehta.",
+                    detail: "must watch",
+                    cast: "Pratik Gandhi, Rajat Kapoor, Satish Kaushik",
+                    
+                    type: "series",
+                    download_url: "https://new20.gdtot.dad/file/4406696018"
+                },
     {
         id: 2,
         title: "Alice in Borderland S01",
@@ -584,7 +613,8 @@ const allData = [
         cast: "Kento Yamazaki, Tao Tsuchiya, Nijirô Murakami",
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
         poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
-        download_url: "https://new20.gdtot.dad/file/5702148078"
+        download_url: "https://new20.gdtot.dad/file/5702148078",
+        
     },
 
 

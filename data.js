@@ -446,20 +446,22 @@ const allData = [
 
     //Series part
 
-
     {
-        title: "Panchayat S04",
+
+        title: "Special OPS S02",
         year: "2025",
         rating: "8.1",
-        quality: "HD (720p)",
         type: "series",
-        genre: "Comedy, Drama",
+        quality: "HD (720p)",
+        genre: " Crime, Drama, Mystery",
+        cast: " Kay Kay Menon, Muzamil Ibrahim, Parmeet Sethi",
         spcl: "You need to extract the file after downloading.",
-        cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
-        plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
-        poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
-        download_url: "https://new20.gdtot.dad/file/2896981353"
+        plot: "The series follows Himmat Singh of Research and Analysis Wing who draws similar patterns in terrorist attacks and is convinced a single person is behind all the attacks.",
+        poster: "https://image.tmdb.org/t/p/original/3AIuPJ8ceXH5tCnwFhcMQewgN1p.jpg",
+        download_url: "https://new20.gdtot.dad/file/3422871415"
     },
+
+
     {
 
         title: "Squid Game S03",
@@ -474,6 +476,22 @@ const allData = [
         poster: "https://www.hellokpop.com/wp-content/uploads/2021/08/Squid-Game-Main-Poster.jpg",
         download_url: "https://new20.gdtot.dad/file/4111557716"
     },
+
+
+    {
+        title: "Panchayat S04",
+        year: "2025",
+        rating: "8.1",
+        quality: "HD (720p)",
+        type: "series",
+        genre: "Comedy, Drama",
+        spcl: "You need to extract the file after downloading.",
+        cast: "Faisal Malik, Jitendra Kumar, Neena Gupta, Raghubir Yadav",
+        plot: "A comedy-drama about an engineering graduate who reluctantly takes a job as a Panchayat secretary in a remote village.",
+        poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
+        download_url: "https://new20.gdtot.dad/file/2896981353"
+    },
+    
     {
 
         title: "Mistry",

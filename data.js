@@ -197,7 +197,7 @@ const allData = [
         cast: "Dhanush, Nayanthara, Andrea Jeremiah",
         plot: "A ruthless billionaire, Neeraj, uses beggars as benamis to launder money, with the help of a disgraced civil submit servant, Deepak",
         poster: "https://m.media-amazon.com/images/M/MV5BMTBhYWJkZTAtOTM2MS00OGExLTkxNWMtMTQxNjAzNDM0MDUwXkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1497612935"
+        download_url: "https://new20.gdtot.dad/file/2005467901"
     },
 
 

@@ -193,7 +193,7 @@ const allData = [
         rating: "7.9",
         type: "Movie",
         genre: "crime, drama, thriller",
-        quality: "CAMRip",
+        quality: "HD (720p)",
         cast: "Dhanush, Nayanthara, Andrea Jeremiah",
         plot: "A ruthless billionaire, Neeraj, uses beggars as benamis to launder money, with the help of a disgraced civil submit servant, Deepak",
         poster: "https://m.media-amazon.com/images/M/MV5BMTBhYWJkZTAtOTM2MS00OGExLTkxNWMtMTQxNjAzNDM0MDUwXkEyXkFqcGc@._V1_.jpg",

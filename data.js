@@ -3,6 +3,19 @@ const allData = [
     //Movies part
 
     {
+                    title: "Saiyaara",
+                    year: "2025",
+                    rating: "7.5",
+                    type: "Movie",
+                    quality: "Pre HD",
+                    genre: "Romance, Drama",
+                    cast: "Ahaan Pandey, Alam khan",
+                    plot: "Short-tempered musician Krish is paired with a no-nonsense lyricist in Vaani, for the music company to work together",
+                    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrPafgV0YUbqF0alj-B-63MNwOzqpyxs3d0kwfgkKDQ2fZv3_hHSkOSpM&s=10",
+                    download_url: "https://new20.gdtot.dad/file/1387230748"
+                },
+
+    {
         title: "Aap Jaisa Koi",
         year: "2025",
         rating: "7.5",

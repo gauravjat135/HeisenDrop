@@ -457,7 +457,7 @@ const allData = [
         cast: " Kay Kay Menon, Muzamil Ibrahim, Parmeet Sethi",
         spcl: "You need to extract the file after downloading.",
         plot: "The series follows Himmat Singh of Research and Analysis Wing who draws similar patterns in terrorist attacks and is convinced a single person is behind all the attacks.",
-        poster: "https://image.tmdb.org/t/p/original/3AIuPJ8ceXH5tCnwFhcMQewgN1p.jpg",
+        poster: "https://m.media-amazon.com/images/M/MV5BN2E3OTI0OGItMWRhMi00NjU1LTk1ZTctMDEwOWZiMDczOWNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         download_url: "https://new20.gdtot.dad/file/3422871415"
     },
 

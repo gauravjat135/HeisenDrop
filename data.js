@@ -173,7 +173,7 @@ const allData = [
         cast: "Kajol, Kherin Sharma, Ronit Roy",
         plot: "A mother and daughter encounter a demon in a village where girls have been disappearing.",
         poster: "https://m.media-amazon.com/images/M/MV5BZjI1ZTUyYzItZDEyMy00MTE1LWFhZmMtZWUxOThjMjU5Njk1XkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/2242209494"
+        download_url: "https://new20.gdtot.dad/file/1241028239"
     },
     {
         title: "M3GAN 2.0",

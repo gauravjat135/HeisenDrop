@@ -3,17 +3,176 @@ const allData = [
     //Movies part
 
     {
-                    title: "Saiyaara",
-                    year: "2025",
-                    rating: "7.5",
-                    type: "Movie",
-                    quality: "Pre HD",
-                    genre: "Romance, Drama",
-                    cast: "Ahaan Pandey, Alam khan",
-                    plot: "Short-tempered musician Krish is paired with a no-nonsense lyricist in Vaani, for the music company to work together",
-                    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrPafgV0YUbqF0alj-B-63MNwOzqpyxs3d0kwfgkKDQ2fZv3_hHSkOSpM&s=10",
-                    download_url: "https://new20.gdtot.dad/file/1387230748"
-                },
+        title: "The Woman in the Yard",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BNmZjZTA2ZmQtMDhiYS00NTlmLTk2NTctNTZlMzVhZmVjYTYyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/851975813"
+    },
+    {
+        title: "Amy Bradley Is Missing S01",
+        year: "2025",
+        rating: "7.0",
+        type: "series",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BMzQ2N2MwM2YtOWI0ZC00NDYwLWJiYWItMWQxOWM1ZDA5YmU1XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1483973397"
+    },
+    {
+        title: "Arjun Son of Vyjayanthi",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BMjYzOTA0ZTItNjQ5My00N2QwLWJlNWEtOTZhYWVmZjY5ODYyXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1545075999"
+    },
+    {
+        title: "Bring Her Back",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BMGY3ZjhhZDMtNTM2My00MjdhLTg0YjQtNGEwNWMyMjQ3MmJjXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1156064172"
+    },
+    {
+        title: "UNTAMED S01",
+        year: "2025",
+        rating: "7.0",
+        type: "series",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BODkxMDM5YWItNDcxZi00NjQ3LWE3NzMtNjM0MzgyNWM0MDhhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3259942816"
+    },
+    {
+        title: "Bhairavam",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BZGE5YWFiODQtZTZlOC00NWFhLWJiNmUtMjZmMjdhY2JlZWQ3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1644066642"
+    },
+    {
+        title: "Romeo S3",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://stat4.bollywoodhungama.in/wp-content/uploads/2025/04/WhatsApp-Image-2025-05-07-at-10.05.44_0b34b52b.jpg",
+        download_url: "https://new20.gdtot.dad/file/1411069379"
+    },
+    {
+        title: "Catalog S01",
+        year: "2025",
+        rating: "7.0",
+        type: "series",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BYmM2NTVlNTEtMDIzMS00ZWI1LWEwZjUtMGI1ZmNiZTk2NmVlXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/14570263932"
+    },
+    {
+        title: "Wall to Wall",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BM2Y1MjcwMWMtN2IyZi00MGIwLWFiM2YtZjkzZWE1NmJlMGFhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1327213989"
+    },
+    {
+        title: "The Bhootnii",
+        year: "2025",
+        rating: "6.3",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BZjE2YTE4MDAtZmYzNy00NGQzLTkyYWUtYTY0MGE3ODU0ZDg3XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1196563739"
+    },
+    {
+        title: "DNA",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BMGVkNDBhOTAtOTdmYi00MGEyLTg2ZDktYTdhYzIzNDUyZDAzXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1541687612"
+    },
+    {
+        title: "Nikita Roy",
+        year: "2025",
+        rating: "6.5",
+        type: "movie",
+        quality: "Pre HD",
+        poster: "https://m.media-amazon.com/images/M/MV5BNDEzNzQwYjUtM2RlNy00NTVmLTg1NDAtMzZjN2FhZWQyMzViXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1030225963"
+    },
+    {
+        title: "The Amateur",
+        year: "2025",
+        rating: "7.5",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BY2NjODhjNGEtYmY5My00NTc5LWFkMWItYjc1NGZkNjkzMzcyXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1189707090"
+    },
+    {
+        title: "Ballerina",
+        year: "2025",
+        rating: "7.5",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BMTUxYTNiOGYtOGVlYy00MGQxLWI1NmItN2RlZGNkYTIzODk1XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1388455662"
+    },
+    {
+        title: "The Shiunji Family Children S01",
+        year: "2025",
+        rating: "6.8",
+        type: "series",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BODIwMmVlNDktZmE4OC00OGY3LTgyZmYtYmE5YTQ1MDI4ZTMzXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3595337032"
+    },
+    {
+        title: "Predator Killer of Killers",
+        year: "2025",
+        rating: "6.8",
+        type: "Movie",
+        quality: "HD (720p)",
+        genre: "Action, Adventure, Fantasy",
+        cast: "Louis Ozawa, Michael Biehn, Rick Gonzalez",
+        plot: "While three of the fiercest warriors in human history—a Viking raider, a ninja in feudal Japan, and a WWII pilot.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZjczYTQyZDctOGY0Zi00ZGVkLWJkOTItMmZlNmNjMzJmYmE5XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/822591238"
+    },
+    {
+        title: "Demon Slayer Kimetsu no Yaiba Infinity Castle",
+        year: "2025",
+        rating: "6.5",
+        type: "Movie",
+        quality: "CAMRip",
+        genre: "Action, Adventure, Fantasy",
+        cast: "Natsuki Hanae, Akari Kitou, Hiro Shimono",
+        plot: "As the Demon Slayer Corps members and Hashira engaged in a group strength training program, the Hashira Training Corps members were attacked by a group of demons led by the Upper Moon 1, Kokushibo.",
+        poster: "https://m.media-amazon.com/images/M/MV5BMDg2Y2UxYTItMTViNi00ODA5LTljM2ItYzhiZDZmODQwOTE0XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1499302000"
+    },
+    {
+        title: "Saiyaara",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "Pre HD",
+        genre: "Romance, Drama",
+        cast: "Ahaan Pandey, Alam khan",
+        plot: "Short-tempered musician Krish is paired with a no-nonsense lyricist in Vaani, for the music company to work together",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrPafgV0YUbqF0alj-B-63MNwOzqpyxs3d0kwfgkKDQ2fZv3_hHSkOSpM&s=10",
+        download_url: "https://new20.gdtot.dad/file/1387230748"
+    },
 
     {
         title: "Aap Jaisa Koi",
@@ -308,7 +467,7 @@ const allData = [
         download_url: "https://new20.gdtot.dad/file/1476779065"
     },
 
-        {
+    {
         title: "Raid 2",
         year: "2025",
         rating: "7.5",
@@ -321,7 +480,7 @@ const allData = [
         download_url: "https://new20.gdtot.dad/file/1333972866"
     },
 
-        {
+    {
         title: "Mission Impossible The Final Reckoning",
         year: "2025",
         rating: "8.5",
@@ -333,7 +492,7 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1830848499"
     },
-        {
+    {
         title: "Final Destination Bloodlines",
         year: "2025",
         rating: "7.1",
@@ -345,7 +504,7 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BYWI0ZjgwOWItNDc0Mi00MmMxLWIyMGMtZTlhMTc1ZDg2ZDM2XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/939601470"
     },
-        {
+    {
         title: "Retro",
         year: "2025",
         rating: "7.1",
@@ -517,7 +676,7 @@ const allData = [
         poster: "https://im.idiva.com/content/2024/May/2_6645d7f28076e.jpg?w=720&h=1280&cc=1",
         download_url: "https://new20.gdtot.dad/file/2896981353"
     },
-    
+
     {
 
         title: "Mistry",
@@ -586,20 +745,20 @@ const allData = [
     },
 
     {
-                
-                    title: "Scam 1992 – The Harshad Mehta Story",
-                    year: 2020,
-                    rating: "7.7",
-                    quality: "HD (720p)",
-                    genre: "Biography, Drama",
-                    poster: "https://m.media-amazon.com/images/M/MV5BNGRkOTVjODgtNTBmZS00MDQ3LWE3ZjQtM2ZiNDQ3OWJkMjM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
-                    plot: "Set in 1980’s & 90’s Bombay, Scam 1992 follows the life of Harshad Mehta.",
-                    detail: "must watch",
-                    cast: "Pratik Gandhi, Rajat Kapoor, Satish Kaushik",
-                    
-                    type: "series",
-                    download_url: "https://new20.gdtot.dad/file/4406696018"
-                },
+
+        title: "Scam 1992 – The Harshad Mehta Story",
+        year: 2020,
+        rating: "7.7",
+        quality: "HD (720p)",
+        genre: "Biography, Drama",
+        poster: "https://m.media-amazon.com/images/M/MV5BNGRkOTVjODgtNTBmZS00MDQ3LWE3ZjQtM2ZiNDQ3OWJkMjM2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        plot: "Set in 1980’s & 90’s Bombay, Scam 1992 follows the life of Harshad Mehta.",
+        detail: "must watch",
+        cast: "Pratik Gandhi, Rajat Kapoor, Satish Kaushik",
+
+        type: "series",
+        download_url: "https://new20.gdtot.dad/file/4406696018"
+    },
     {
         id: 2,
         title: "Alice in Borderland S01",
@@ -627,7 +786,7 @@ const allData = [
         plot: "A boy disappears, leading to supernatural mysteries and secret experiments.",
         poster: "https://upload.wikimedia.org/wikipedia/en/7/75/Alice_in_Borderland_poster.jpg",
         download_url: "https://new20.gdtot.dad/file/5702148078",
-        
+
     },
 
 

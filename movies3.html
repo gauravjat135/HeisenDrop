@@ -49,8 +49,6 @@
           <p id="modal-meta" class="text-gray-400 text-sm"></p>
           <p id="modal-description" class="mt-2 text-gray-300"></p>
           <div class="grid grid-cols-2 gap-4 text-sm text-gray-300 mt-4">
-            <div><span class="font-semibold text-white">Genre:</span> <span id="modal-genre"></span></div>
-            <div><span class="font-semibold text-white">Cast:</span> <span id="modal-cast"></span></div>
           </div>
           <a id="modal-download" href="#" target="_blank"
             class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"><i
@@ -91,7 +89,7 @@
     document.addEventListener("DOMContentLoaded", () => {
       const pageType = "movie";
       const MOVIES_PER_PAGE = 20;
-      const currentPage = 2; // Because this is movies2.html
+      const currentPage = 3; // Because this is movies2.html
 
       if (!allData || !Array.isArray(allData)) {
         console.error("allData not loaded or invalid");

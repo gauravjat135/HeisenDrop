@@ -3,6 +3,15 @@ const allData = [
     //Movies part
 
     {
+        title: "Ronth",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BNzAyMWVkNmQtMTQyZi00YjVkLWI3YTctYTVjZmEwMDRjZDI0XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1354495328"
+    },
+    {
         title: "The Woman in the Yard",
         year: "2025",
         rating: "7.0",

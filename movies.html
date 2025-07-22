@@ -80,9 +80,7 @@
     modalPoster.src = item.poster;
     modalTitle.textContent = item.title;
     modalMeta.textContent = `${item.year} • ${item.type} • Rating: ${item.rating || "N/A"}`;
-    modalDescription.textContent = item.plot || "No description available.";
-    modalGenre.textContent = item.genre || "Unknown";
-    modalCast.textContent = item.cast || "Unknown";
+
     modalDownload.href = item.download_url || "#";
     modal.classList.remove("hidden");
   };
@@ -114,7 +112,31 @@
     });
 
     // Toggle cancel button
-    clearSearch.classList.toggle("hidden", input.value === "");
+    // clearSearch.classList.toggle("hidden", input.value === "");
+
+
+
+
+
+    let cancelBtn = document.getElementById("search-cancel");
+        if (!cancelBtn) {
+          cancelBtn = document.createElement("span");
+          cancelBtn.id = "search-cancel";
+          cancelBtn.innerHTML = `<i class="fas fa-times"></i>`;
+          cancelBtn.className =
+            "absolute right-4 top-2.5 text-gray-400 cursor-pointer text-xl";
+          cancelBtn.style.display = input.value ? "block" : "none";
+          input.parentElement.style.position = "relative";
+          input.parentElement.appendChild(cancelBtn);
+
+          cancelBtn.addEventListener("click", () => {
+            input.value = "";
+            input.dispatchEvent(new Event("input"));
+            input.focus();
+          });
+        }
+
+        cancelBtn.style.display = input.value ? "block" : "none";
   }
 
   // Constants

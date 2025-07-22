@@ -1,3 +1,4 @@
+<!-- mustWatch2.html -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +23,7 @@
     </div>
 
     <div id="results" class="grid grid-cols-2 md:grid-cols-4 gap-6"></div>
+
     <div id="no-results" class="hidden flex flex-col items-center justify-center mt-10">
       <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_iwmd6pyr.json" background="transparent"
         speed="1" style="width: 200px; height: 200px;" loop autoplay></lottie-player>
@@ -35,12 +37,10 @@
   <!-- Modal -->
   <div id="modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center z-50 hidden">
     <div class="bg-gray-800 rounded-lg shadow-lg max-w-3xl w-full mx-4 md:mx-0 relative">
-      <!-- Updated Close Button -->
       <button onclick="closeModal()"
-        class="absolute top-3 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-900 text-white transition duration-200">
-        <i class="fas fa-times text-lg"></i>
+        class="absolute top-3 right-4 w-10 h-10 flex items-center justify-center rounded-full bg-gray-700 hover:bg-gray-900 text-white text-xl font-bold leading-none transition duration-200">
+        &times;
       </button>
-
       <div class="md:flex">
         <img id="modal-poster" class="w-full md:w-1/2 h-80 object-cover rounded-l-lg" />
         <div class="p-6 space-y-2">
@@ -48,8 +48,7 @@
           <p id="modal-meta" class="text-gray-400 text-sm"></p>
           <p id="modal-description" class="mt-2 text-gray-300"></p>
           <div class="grid grid-cols-2 gap-4 text-sm text-gray-300 mt-4">
-            <div><span class="font-semibold text-white">Genre:</span> <span id="modal-genre"></span></div>
-            <div><span class="font-semibold text-white">Cast:</span> <span id="modal-cast"></span></div>
+
           </div>
           <a id="modal-download" href="#" target="_blank"
             class="inline-block mt-4 bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
@@ -62,36 +61,41 @@
 
   <script src="data.js"></script>
   <script>
+    const input = document.getElementById("search");
+    const container = document.getElementById("results");
+    const noResults = document.getElementById("no-results");
+    const clearSearch = document.getElementById("clear-search");
+
+    const modal = document.getElementById("modal");
+    const modalPoster = document.getElementById("modal-poster");
+    const modalTitle = document.getElementById("modal-title");
+    const modalMeta = document.getElementById("modal-meta");
+    const modalDescription = document.getElementById("modal-description");
+    const modalGenre = document.getElementById("modal-genre");
+    const modalCast = document.getElementById("modal-cast");
+    const modalDownload = document.getElementById("modal-download");
+
+    const openModal = (item) => {
+      modalPoster.src = item.poster;
+      modalTitle.textContent = item.title;
+      modalMeta.textContent = `${item.year} • ${item.type} • Rating: ${item.rating || "N/A"}`;
+      modalDescription.textContent = item.plot || "No description available.";
+      modalGenre.textContent = item.genre || "Unknown";
+      modalCast.textContent = item.cast || "Unknown";
+      modalDownload.href = item.download_url || "#";
+      modal.classList.remove("hidden");
+    };
+
+    const closeModal = () => modal.classList.add("hidden");
+
     document.addEventListener("DOMContentLoaded", () => {
-      const container = document.getElementById("results");
-      const input = document.getElementById("search");
-      const clearBtn = document.getElementById("clear-search");
-      const noResults = document.getElementById("no-results");
-
-      const modal = document.getElementById("modal");
-      const modalPoster = document.getElementById("modal-poster");
-      const modalTitle = document.getElementById("modal-title");
-      const modalMeta = document.getElementById("modal-meta");
-      const modalDescription = document.getElementById("modal-description");
-      const modalGenre = document.getElementById("modal-genre");
-      const modalCast = document.getElementById("modal-cast");
-      const modalDownload = document.getElementById("modal-download");
-
       const mustWatchItems = allData.filter(i => i.detail?.toLowerCase().includes("must watch"));
 
-      const openModal = (item) => {
-        modalPoster.src = item.poster;
-        modalTitle.textContent = item.title;
-        modalMeta.textContent = `${item.year} • ${item.type} • Rating: ${item.rating || "N/A"}`;
-        modalDescription.textContent = item.plot || "No description available.";
-        modalGenre.textContent = item.genre || "Unknown";
-        modalCast.textContent = item.cast || "Unknown";
-        modalDownload.href = item.download_url || "#";
-        modal.classList.remove("hidden");
-      };
-
-      const closeModal = () => modal.classList.add("hidden");
-      window.closeModal = closeModal; // Ensure it's available globally
+      const ITEMS_PER_PAGE = 20;
+      const CURRENT_PAGE = 2;
+      const start = (CURRENT_PAGE - 1) * ITEMS_PER_PAGE;
+      const end = start + ITEMS_PER_PAGE;
+      const pageItems = mustWatchItems.slice(start, end);
 
       function render(items) {
         container.innerHTML = "";
@@ -105,13 +109,12 @@
 
         items.forEach(item => {
           const card = document.createElement("div");
-          card.className = "bg-gray-800 rounded overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:z-10 cursor-pointer";
+          card.className =
+            "bg-gray-800 rounded overflow-hidden shadow-lg transform transition duration-300 hover:scale-105 hover:z-10 cursor-pointer";
           card.innerHTML = `
             <img src="${item.poster}" alt="${item.title}" class="w-full h-64 object-cover">
             <div class="p-4">
-              <div class="relative">
-                <h3 class="text-lg font-bold">${item.title}</h3>
-              </div>
+              <h3 class="text-lg font-bold">${item.title}</h3>
               <p class="text-sm text-gray-400">${item.year} • ${item.type}</p>
               <p class="text-sm text-gray-400">${item.quality}</p>
             </div>
@@ -119,24 +122,29 @@
           card.addEventListener("click", () => openModal(item));
           container.appendChild(card);
         });
+
+        clearSearch.classList.toggle("hidden", !input.value);
       }
 
       input.addEventListener("input", (e) => {
         const query = e.target.value.toLowerCase();
-
         if (!query) {
-          render(mustWatchItems); // Show only must-watch by default
+          render(pageItems);
         } else {
           const filtered = allData.filter(item =>
             item.title?.toLowerCase().includes(query)
           );
-          render(filtered); // Allow full DB search
+          render(filtered);
         }
-
-        clearBtn.classList.toggle("hidden", !e.target.value);
       });
 
-      render(mustWatchItems); // Initial render
+      clearSearch.addEventListener("click", () => {
+        input.value = "";
+        input.dispatchEvent(new Event("input"));
+        input.focus();
+      });
+
+      render(pageItems);
     });
   </script>
 

@@ -11,6 +11,19 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BMGEwMDFmNGMtZmY2OS00OWJlLWFiMjQtYjg1NzFmYjcwNmVkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         download_url: "https://new20.gdtot.dad/file/1392822001"
     },
+
+    {
+        title: "Saiyaara",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "Pre HD",
+        genre: "Romance, Drama",
+        cast: "Ahaan Pandey, Alam khan",
+        plot: "Short-tempered musician Krish is paired with a no-nonsense lyricist in Vaani, for the music company to work together",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrPafgV0YUbqF0alj-B-63MNwOzqpyxs3d0kwfgkKDQ2fZv3_hHSkOSpM&s=10",
+        download_url: "https://new20.gdtot.dad/file/1387230748"
+    },
     {
         title: "Ronth",
         year: "2025",
@@ -19,6 +32,16 @@ const allData = [
         quality: "HD (720p)",
         poster: "https://m.media-amazon.com/images/M/MV5BNzAyMWVkNmQtMTQyZi00YjVkLWI3YTctYTVjZmEwMDRjZDI0XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1354495328"
+    },
+
+        {
+        title: "Madeas Destination Wedding",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BYzRkM2JmM2EtNTgzZi00MzdlLTkxM2ItNTlhNmQzZjM2NjA2XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1166183974"
     },
     {
         title: "The Woman in the Yard",
@@ -179,18 +202,46 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BMDg2Y2UxYTItMTViNi00ODA5LTljM2ItYzhiZDZmODQwOTE0XkEyXkFqcGc@._V1_.jpg",
         download_url: "https://new20.gdtot.dad/file/1499302000"
     },
+
     {
-        title: "Saiyaara",
+        title: "Sri Sri Sri Raja Vaaru",
         year: "2025",
         rating: "7.5",
         type: "Movie",
-        quality: "Pre HD",
-        genre: "Romance, Drama",
-        cast: "Ahaan Pandey, Alam khan",
-        plot: "Short-tempered musician Krish is paired with a no-nonsense lyricist in Vaani, for the music company to work together",
-        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUrPafgV0YUbqF0alj-B-63MNwOzqpyxs3d0kwfgkKDQ2fZv3_hHSkOSpM&s=10",
-        download_url: "https://new20.gdtot.dad/file/1387230748"
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BYzE4NzJjNjItNmU2My00NDI1LWI0OGMtYTQ5M2U5NTA1MTJkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1562306553"
     },
+    {
+        title: "Narivetta",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BN2QwMGM0MGMtYTQ1MS00M2UzLTg1NWYtMjk2MmQ2OTIyOTU4XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1551480853"
+    },
+    {
+        title: "Devils Double Next Level",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BZGNkODY3ODctMzZkMy00YjJlLTllNzUtMGIxNjAyM2IwNjY5XkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1218649685"
+    },
+    {
+        title: "Ziam",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BZDdlN2Q0ZjktNWI3Ny00NGYzLWJmNmItN2Y3YmNhMmZmNjY3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1080560022"
+    },
+
+
+
 
     {
         title: "Aap Jaisa Koi",
@@ -402,7 +453,7 @@ const allData = [
         cast: "Prabhas, Preity Mukhundhan, Vishnu Manchu",
         plot: "After witnessing the cruel sacrifice of his childhood friend, an atheist warrior rejects religion until love forces him to find his own faith.",
         poster: "https://akm-img-a-in.tosshub.com/indiatoday/styles/medium_crop_simple/public/2023-11/f_kn7jpaoaa9lgw.jpg?VersionId=DtWS9SGrkn402eMgVUtYg9DzrGaN4E9f&size=750:*",
-        download_url: "https://new20.gdtot.dad/file/1481040319"
+        download_url: "https://new20.gdtot.dad/file/1687974405"
     },
 
 
@@ -431,6 +482,7 @@ const allData = [
         poster: "https://images.fandango.com/ImageRenderer/0/0/redesign/static/img/default_poster--dark-mode.png/0/images/masterrepository/Fandango/240756/housefull5-9x16_Overseas.jpg",
         download_url: "https://new20.gdtot.dad/file/1530483604"
     },
+
     {
         title: "KO",
         year: "2025",
@@ -457,6 +509,15 @@ const allData = [
         plot: "After a family tragedy, kung fu prodigy Li Fong is uprooted from his home in Beijing and forced to move to New York City with his mother.",
         poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPT2qMHZs0ZbvLtHI70Z4l3DMhQbVdT9VwzYHDieNmsYnk_YX_B5xS_sqU&s=10",
         download_url: "https://new20.gdtot.dad/file/1048127467"
+    },
+    {
+        title: "Smurfs",
+        year: "2025",
+        rating: "7.5",
+        type: "Movie",
+        quality: "HD (720p)",
+        poster: "https://m.media-amazon.com/images/M/MV5BNDBlOTk3YTMtNzE4MS00ZWQzLWE2ZTYtMTMzYmY2YmI0YjllXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/861403762"
     },
 
     {
@@ -663,6 +724,108 @@ const allData = [
         poster: "https://m.media-amazon.com/images/M/MV5BN2E3OTI0OGItMWRhMi00NjU1LTk1ZTctMDEwOWZiMDczOWNlXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
         download_url: "https://new20.gdtot.dad/file/3422871415"
     },
+    {
+
+        title: "Wind Breaker S02",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BNDA2MDRhNTEtMjU4NC00MzZjLWJjM2UtZDg4MWI5OWU3ZjEwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3606704034"
+    },
+    {
+
+        title: "7 Bears S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BMzUxM2NiMTAtYTRmOC00YzI1LWEyZTktYzVjMzQxMTE3NzY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3087923252"
+    },
+    {
+
+        title: "Leviathan S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BZmI2ZTRmYjktYjg2Mi00M2Q1LWFkNjUtNGJiMjczNzIzMDgxXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3928209540"
+    },
+    {
+
+        title: "Too Much S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BOThkZGJjM2ItZDI5ZS00Yjc4LTk1YzQtZGM3ZDNhMTUyOTMyXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/4533221989"
+    },
+    {
+
+        title: "Mitti – Ek Nayi Pehchaan S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BN2Q5YjE0YmItMWIwMi00NTZiLTgyMDEtMDNkMTgzYTM2OGM0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/2355193037"
+    },
+    {
+
+        title: "The Gringo Hunters S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BMzcxMWJhODEtNWI0MS00YWRhLWE4Y2ItN2UwZGRkOGU2YjNmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/6651940818"
+    },
+    {
+
+        title: "Under a Dark Sun S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BYTI4ODc4NzEtOWNkZi00ODk1LWI3NDktNDYwZjliMTcwNmIxXkEyXkFqcGc@._V1_.jpg",
+        download_url: "https://new20.gdtot.dad/file/3251385210"
+    },
+    {
+
+        title: "Ballard S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://m.media-amazon.com/images/M/MV5BNmZlN2MzNGQtMTg4Yy00N2RmLThkZWQtMjVmMmE3MmY4ODIwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/5223833353"
+    },
+    {
+
+        title: "7 Shades Of Dhoni S01",
+        year: "2025",
+        rating: "7.1",
+        type: "series",
+        quality: "HD (720p)",
+        spcl: "You need to extract the file after downloading.",
+        poster: "https://img10.hotstar.com/image/upload/f_auto,q_auto/sources/r1/cms/prod/4843/1751792424843-i",
+        download_url: "https://new20.gdtot.dad/file/865155312"
+    },
+
+
+    
 
 
     {

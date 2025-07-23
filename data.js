@@ -3,6 +3,15 @@ const allData = [
     //Movies part
 
     {
+        title: "Tanvi the Great",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "Pre HD",
+        poster: "https://m.media-amazon.com/images/M/MV5BMGEwMDFmNGMtZmY2OS00OWJlLWFiMjQtYjg1NzFmYjcwNmVkXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        download_url: "https://new20.gdtot.dad/file/1392822001"
+    },
+    {
         title: "Ronth",
         year: "2025",
         rating: "7.0",

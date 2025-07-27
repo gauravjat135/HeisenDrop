@@ -3,6 +3,16 @@ const allData = [
     //Movies part
 
     {
+        title: "Mahavatar Narsimha",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "Pre HD",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBDjRFnEeVVmGajwQ-0WqyDnZSRUL0J7wZ8_cASSM_0448z0Fgp3419fhq&s=10",
+        download_url: "https://new21.gdtot.dad/file/1261068975"
+    },
+
+    {
         title: "Tanvi the Great",
         year: "2025",
         rating: "7.0",

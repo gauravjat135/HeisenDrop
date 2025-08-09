@@ -11,6 +11,15 @@ const allData = [
         poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBDjRFnEeVVmGajwQ-0WqyDnZSRUL0J7wZ8_cASSM_0448z0Fgp3419fhq&s=10",
         download_url: "https://new21.gdtot.dad/file/1261068975"
     },
+{
+        title: "Gram Chikitsalay",
+        year: "2025",
+        rating: "7.0",
+        type: "series",
+        quality: "HD",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI0VXAR1vaD5yxqdNS4uL75LJN5vblyHC4dDdfgwr2qLYB5ol433cwqlo_&s=10",
+        download_url: "https://new25.gdtot.dad/file/1881550939"
+    },
 
     {
         title: "Tanvi the Great",
@@ -983,3 +992,4 @@ const allData = [
 
 
 ]
+

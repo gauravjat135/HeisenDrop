@@ -3,6 +3,26 @@ const allData = [
     //Movies part
 
     {
+        title: "Udaipur Files",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "CAMRip",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4nyinpipjSPPb_8BIidAZ_g_m3K4YtsQSMby6pEX6BRApbDPCA_HumYM&s=10",
+        download_url: "https://new25.gdtot.dad/file/1005293665"
+    },
+
+    {
+        title: "Andaaz 2",
+        year: "2025",
+        rating: "7.0",
+        type: "movie",
+        quality: "CAMRip",
+        poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRq2_UCD33HMmvQxLbSECH2WUt1nRo5MYoCZbnFfSdVCqNYy6ZPuywFLeU&s=10",
+        download_url: "https://new25.gdtot.dad/file/1211451011"
+    },
+
+    {
         title: "Mahavatar Narsimha",
         year: "2025",
         rating: "7.0",
@@ -992,4 +1012,5 @@ const allData = [
 
 
 ]
+
 

@@ -1,6 +1,24 @@
 const allData = [
 
     //Movies part
+    {
+                    title: "Coolie",
+                    year: "2025",
+                    rating: "7.8",
+                    type: "movie",
+                    quality: "CAMRip",
+                    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRXbuV9vxh09h756cCkmCw-VTzv9iwbruv5Xe6NHm1D-vFyR5dE3QXLQ-a&s=10",
+                    download_url: "https://new25.gdtot.dad/file/1390553957"
+                },
+                 {
+                    title: "War 2",
+                    year: "2025",
+                    rating: "7.8",
+                    type: "movie",
+                    quality: "Pre HD",
+                    poster: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxBkG3QrAiw_nYMZMgjOttHWTyxh0I83-1Jd46kFHk2FV9iXMsPdeNmRU&s=10",
+                    download_url: "https://new25.gdtot.dad/file/1404843782"
+                },
 
     {
         title: "Udaipur Files",
@@ -1012,5 +1030,6 @@ const allData = [
 
 
 ]
+
 
 

@@ -329,7 +329,7 @@ const allData = [
         year: "2025",
         rating: "7.5",
         type: "Movie",
-        quality: "Pre HD",
+        quality: "HD",
         genre: "Action, Adventure, Sci-Fi",
         cast: "Nathan Fillion, Nicholas Hoult, Rachel Brosnahan",
         plot: "Superman, a journalist in Metropolis, embarks on a journey to reconcile his Kryptonian heritage with his human upbringing as Clark Kent.",
@@ -1030,6 +1030,7 @@ const allData = [
 
 
 ]
+
 
 
 

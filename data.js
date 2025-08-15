@@ -334,7 +334,7 @@ const allData = [
         cast: "Nathan Fillion, Nicholas Hoult, Rachel Brosnahan",
         plot: "Superman, a journalist in Metropolis, embarks on a journey to reconcile his Kryptonian heritage with his human upbringing as Clark Kent.",
         poster: "https://m.media-amazon.com/images/M/MV5BOGMwZGJiM2EtMzEwZC00YTYzLWIxNzYtMmJmZWNlZjgxZTMwXkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1327242675"
+        download_url: "https://new25.gdtot.dad/file/1258837223"
     },
     {
         title: "Metro In Dino",
@@ -1030,6 +1030,7 @@ const allData = [
 
 
 ]
+
 
 
 

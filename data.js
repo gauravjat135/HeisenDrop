@@ -626,7 +626,7 @@ const allData = [
         cast: "Tom Cruise, Rebecca Ferguson, Simon Pegg",
         plot: "Ethan Hunt and his team embark on their most dangerous mission yet, facing a global conspiracy that threatens the world.",
         poster: "https://m.media-amazon.com/images/M/MV5BZGQ5NGEyYTItMjNiMi00Y2EwLTkzOWItMjc5YjJiMjMyNTI0XkEyXkFqcGc@._V1_.jpg",
-        download_url: "https://new20.gdtot.dad/file/1830848499"
+        download_url: "https://new25.gdtot.dad/file/1476762140"
     },
     {
         title: "Final Destination Bloodlines",
@@ -1030,6 +1030,7 @@ const allData = [
 
 
 ]
+
 
 
 

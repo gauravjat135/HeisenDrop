@@ -621,7 +621,7 @@ const allData = [
         year: "2025",
         rating: "8.5",
         type: "Movie",
-        quality: "CAMRip",
+        quality: "HD (720p)",
         genre: "Action, Adventure, Thriller",
         cast: "Tom Cruise, Rebecca Ferguson, Simon Pegg",
         plot: "Ethan Hunt and his team embark on their most dangerous mission yet, facing a global conspiracy that threatens the world.",
@@ -1030,6 +1030,7 @@ const allData = [
 
 
 ]
+
 
 
 

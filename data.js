@@ -358,7 +358,7 @@ const allData = [
         cast: " Rajkummar Rao, Saurabh Shukla, Swanand Kirkire",
         plot: "Set in the rural, rusty and politically charged Allahabad of the 1980s, Maalik is a peek into the making of a dreaded gangster from a humble background with intoxication of power to rule the world.",
         poster: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202408/rajkummar-rao-in-maalik-315843439-3x4.jpg?VersionId=vbGtcSEdPCIggRMEMZ3kPKRzN17l8a6m",
-        download_url: "https://new25.gdtot.dad/file/1366477640"
+        download_url: "https://new25.gdtot.dad/file/1452126859"
     },
     {
         title: "Almost Cops",
@@ -1030,6 +1030,7 @@ const allData = [
 
 
 ]
+
 
 
 
